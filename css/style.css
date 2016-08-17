@@ -3719,9 +3719,9 @@ input[type="checkbox"]:checked + label::before {
   left: 0;
   width: 30px;
   height: 30px;
-  background: transparent url("../img/icons-sprite-small.png") -359px 0 no-repeat;
-  -webkit-background-size: 393px 30px;
-          background-size: 393px 30px;
+  background: transparent url("../img/icon-success.png") 0 0 no-repeat;
+  -webkit-background-size: 31px 27px;
+          background-size: 31px 27px;
   content: "";
 }
 
