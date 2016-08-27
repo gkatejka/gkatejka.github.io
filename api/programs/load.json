@@ -1,0 +1,49 @@
+[{
+	"id": "728",
+	"numb": "01",
+	"type": "green",
+	"action": true,
+	"title": "Я - владелец бизнеса",
+	"subtitle": "Я - владелец бизнеса",
+	"startDate": "12 августа",
+	"oldPrice": "4 200",
+	"newPrice": "9 000",
+	"url": "/",
+	"added": true
+},{
+	"id": "758",
+	"numb": "02",
+	"type": "yellow",
+	"action": false,
+	"title": "Я - владелец бизнеса",
+	"subtitle": "Научит открывать и развивать своё дело",
+	"startDate": "09 сентября",
+	"oldPrice": "2 000",
+	"newPrice": "5 000",
+	"url": "/",
+	"added": false
+},{
+	"id": "718",
+	"numb": "03",
+	"type": "yellow",
+	"action": true,
+	"title": "Я - владелец бизнеса",
+	"subtitle": "Научит открывать и развивать своё дело и развивать своё дело и развивать своё дело",
+	"startDate": "16 декабря",
+	"oldPrice": null,
+	"newPrice": "4 000",
+	"url": "/",
+	"added": true
+},{
+	"id": "722",
+	"numb": "04",
+	"type": "pink",
+	"action": false,
+	"title": "Я - владелец бизнеса",
+	"subtitle": "Я - владелец бизнеса",
+	"startDate": "01 января",
+	"oldPrice": "6 500",
+	"newPrice": "9 000",
+	"url": "/",
+	"added": true
+}]

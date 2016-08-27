@@ -2,15 +2,9 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>Мои данные - Личный кабинет | Большие надежды</title>
+  <title>Вход в личный кабинет | Большие надежды</title>
   <meta name="format-detection" content="telephone=no">
   <link rel="stylesheet" href="css/style.min.css">
-  <style>
-	div.hideShowPassword-wrapper { position: relative; display: block; vertical-align: middle; margin: 0px; }
-	div.hideShowPassword-btn { position: absolute; top: 50%; -webkit-user-select: none; right: 0px; margin-top: -17px; width: 44px; height: 100%; cursor: pointer; }
-	input.hideShowPassword-input { padding-right: 44px; }
-	input.hideShowPassword-input.active-eye { background: url(../img/icon-pass-eye.png) 97% 12px/16px 8px no-repeat #f7f9fa; }
-  </style>
 </head>
 <body>
   <header class="page-header">
@@ -21,7 +15,7 @@
       <div class="page-header__nav">
         <div class="page-header__nav-top">
           <div class="page-header__phones-wrap">
-            <a href="tel:+78126543937" class="page-header__phone">+7 (812) <b>654-39-37</b></a>
+            <a href="tel:+78126543937" class="page-header__phone">+7 (812) 654-39-37</a>
           </div>
           <div class="page-header__links">
               <a href="#" class="page-header__bonus-shop">Бонус-магазин</a>
@@ -173,6 +167,7 @@
               </div>
             </div>
           </div>
+
         </div>
       </div>
     </div>
@@ -183,59 +178,57 @@
       <div class="container">
         <ul class="breadcrumbs__list">
           <li class="breadcrumbs__list-item"><a href="main.html">Главная</a></li>
-          <li class="breadcrumbs__list-item">Личный кабинет</li>
+          <li class="breadcrumbs__list-item breadcrumbs__list-item--active">Корзина</li>
         </ul>
       </div>
     </div>
 
     <div class="container">
-      <section class="user">
-        <div class="page-head">
-          <h1 class="user__title h1 h1--line">Личный кабинет</h1>
-          <div class="user__greetings">
-            Добро пожаловать, <img src="img/founder-photo.jpg" alt="" width="47" height="47"> Эльвира Пикалева
-          </div>
-        </div>
-        <div class="user__body">
-          <aside class="user__nav">
-            <ul class="sidebar-nav">
-              <li><a href="#">Мои заказы</a></li>
-              <li class="active">Мои данные</li>
-              <li><a href="#">Список желаемого</a></li>
-            </ul>
-          </aside>
-          <div class="user__base-info">
-            <h2 class="h2 h2--line h2--left">Мои данные</h2>
-            <div class="user-form">
-              <form action="/echo" class="form">
-                <div class="user-form__left">
-                  <div class="user-form__photo-wrap">
-                    <input type="file" >
-                    <div class="user-form__photo" style="background-image: url('../img/founder-photo.jpg');"></div>
-                    <button class="user-form__photo-btn">Загрузить фото</button>
-                  </div>
-                </div>
-                <div class="user-form__right">
-                  <input type="text" placeholder="Имя" class="text-validate">
-                  <input type="text" placeholder="Фамилия" class="text-validate">
-                  <input type="text" placeholder="Отчество" class="text-validate">
-                  <input type="email" placeholder="myemail@bigfuture.school" class="email-validate">
-                  <input type="tel" placeholder="+7 (___) ___-__-__" class="js-input-tel text-validate">
-                  <input type="text" placeholder="Укажите свой город" class="text-validate">
-                  <input type="password" maxlength="10" placeholder="Старый пароль" class="js-pass-eye pass-validate">
-                  <input type="password" maxlength="10" placeholder="Новый пароль (мин. 6 символов)" class="js-pass-eye pass-validate-re">
-                  <input type="password" maxlength="10" placeholder="Повторите новый пароль" class="js-pass-eye pass-validate-re">
-				  
-                </div>
-                <div class="user-form__btns">
-                  <a href="user-account-change-password.html" class="user-form__link">Забыли пароль?</a>
-                  <button type="submit" class="btn btn--submit">Сохранить</button>
-                </div>
-              </form>
+      <section class="login">
+      <h1 class="h1 h1--line">Регистрация аккаунта</h1>
+        <div class="form-login">
+          <form action="/echo">
+            <h2 class="h2 h2--line">Присоединяйтесь к нам</h2>
+            <div class="form-login__group">
+              <input type="email" placeholder="Ваш e-mail">
+              <input type="text" placeholder="Ваше имя">
+              <input type="text" placeholder="Ваше фамилия">
+              <input type="password" maxlength="10" placeholder="Пароль">
+              <input type="password" maxlength="10" placeholder="Повторите пароль">
             </div>
-          </div>
+            <div class="form-login__check">
+              <b>Тип профиля:</b>
+              <input type="radio" name="user-type" value="student" id="user-student">
+              <label for="user-student">Ученик</label>
+              <input type="radio" name="user-type" value="adault" id="user-adault" checked>
+              <label for="user-adault">Взрослый</label>
+            </div>
+            <div class="form-login__btns">
+              <button type="submit" class="btn btn--submit">Зарегистрироваться</button>
+            </div>
+            <div class="form-login__social">
+              <b>Регистрация с помощью:</b>
+              <ul class="social-links social-links--lagoon">
+                <li>
+                  <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="20" viewBox="0 0 96.124 96.123"><path d="M72.089.02L59.624 0C45.62 0 36.57 9.285 36.57 23.656v10.907H24.037a1.96 1.96 0 0 0-1.96 1.961v15.803a1.96 1.96 0 0 0 1.96 1.96H36.57v39.876a1.96 1.96 0 0 0 1.96 1.96h16.352a1.96 1.96 0 0 0 1.96-1.96V54.287h14.654a1.96 1.96 0 0 0 1.96-1.96l.006-15.803a1.963 1.963 0 0 0-1.961-1.961H56.842v-9.246c0-4.444 1.059-6.7 6.848-6.7l8.397-.003a1.96 1.96 0 0 0 1.959-1.96V1.98A1.96 1.96 0 0 0 72.089.02z" fill="#9f9f9f"/></svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 304.36 304.36" width="28" height="20"><path d="M261.945 175.576c10.096 9.857 20.752 19.131 29.807 29.982 4 4.822 7.787 9.798 10.684 15.394 4.105 7.955.387 16.709-6.746 17.184l-44.34-.02c-11.436.949-20.559-3.655-28.23-11.474-6.139-6.253-11.824-12.908-17.727-19.372-2.42-2.642-4.953-5.128-7.979-7.093-6.053-3.929-11.307-2.726-14.766 3.587-3.523 6.421-4.322 13.531-4.668 20.687-.475 10.441-3.631 13.186-14.119 13.664-22.414 1.057-43.686-2.334-63.447-13.641-17.422-9.968-30.932-24.04-42.691-39.971-22.895-31.021-40.428-65.108-56.186-100.15C-2.01 76.458.584 72.22 9.295 72.07c14.465-.281 28.928-.261 43.41-.02 5.879.086 9.771 3.458 12.041 9.012 7.826 19.243 17.402 37.551 29.422 54.521 3.201 4.518 6.465 9.036 11.113 12.216 5.142 3.521 9.057 2.354 11.476-3.374 1.535-3.632 2.207-7.544 2.553-11.434 1.146-13.383 1.297-26.743-.713-40.079-1.234-8.323-5.922-13.711-14.227-15.286-4.238-.803-3.607-2.38-1.555-4.799 3.564-4.172 6.916-6.769 13.598-6.769h50.111c7.889 1.557 9.641 5.101 10.721 13.039l.043 55.663c-.086 3.073 1.535 12.192 7.07 14.226 4.43 1.448 7.35-2.096 10.008-4.905 11.998-12.734 20.561-27.783 28.211-43.366 3.395-6.852 6.314-13.968 9.143-21.078 2.096-5.276 5.385-7.872 11.328-7.757l48.229.043c1.43 0 2.877.021 4.262.258 8.127 1.385 10.354 4.881 7.844 12.817-3.955 12.451-11.65 22.827-19.174 33.251-8.043 11.129-16.645 21.877-24.621 33.072-7.328 10.223-6.746 15.376 2.357 24.255zm0 0" fill="#9f9f9f" fill-rule="evenodd" clip-rule="evenodd"/></svg>
+                  </a></li>
+                <li>
+                  <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 612 612" width="28" height="20"><path d="M612 116.258a250.714 250.714 0 0 1-72.088 19.772c25.929-15.527 45.777-40.155 55.184-69.411-24.322 14.379-51.169 24.82-79.775 30.48-22.907-24.437-55.49-39.658-91.63-39.658-69.334 0-125.551 56.217-125.551 125.513 0 9.828 1.109 19.427 3.251 28.606-104.326-5.24-196.835-55.223-258.75-131.174-10.823 18.51-16.98 40.078-16.98 63.101 0 43.559 22.181 81.993 55.835 104.479a125.556 125.556 0 0 1-56.867-15.756v1.568c0 60.806 43.291 111.554 100.693 123.104-10.517 2.83-21.607 4.398-33.08 4.398-8.107 0-15.947-.803-23.634-2.333 15.985 49.907 62.336 86.199 117.253 87.194-42.947 33.654-97.099 53.655-155.916 53.655-10.134 0-20.116-.612-29.944-1.721 55.567 35.681 121.536 56.485 192.438 56.485 230.948 0 357.188-191.291 357.188-357.188l-.421-16.253c24.666-17.593 46.005-39.697 62.794-64.861z" fill="#9f9f9f"/></svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </form>
         </div>
       </section>
+
     </div>
 
   </main>
@@ -310,6 +303,6 @@
       </div>
     </div>
   </footer>
-  <script src="js/user-account-base/script.min.js"></script>
+  <script src="js/main/script.js"></script>
 </body>
 </html>
