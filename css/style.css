@@ -1147,6 +1147,7 @@ h2--left::after,
 
 .btn--buy {
   padding-left: 35px;
+  border: none;
   background: #aaebe8 url("../img/icon-bag.png") 12px 6px no-repeat;
   -webkit-background-size: 17px 15px;
           background-size: 17px 15px;
@@ -4439,6 +4440,11 @@ body {
   padding-bottom: 23px;
 }
 
+.user-bonus__head {
+  font-family: "ALSSchlangeslab", Tahoma, sans-serif;
+  font-weight: bold;
+}
+
 .user-bonus__head::after,
 .user-bonus__head::before {
   display: table;
@@ -4492,6 +4498,7 @@ body {
 }
 
 .user-bonus__body thead {
+  font-family: "ALSSchlangeslab", Tahoma, sans-serif;
   font-weight: bold;
 }
 
@@ -4601,6 +4608,11 @@ body {
   padding-bottom: 23px;
 }
 
+.course-item__head {
+  font-family: "ALSSchlangeslab", Tahoma, sans-serif;
+  font-weight: bold;
+}
+
 .course-item__head::after,
 .course-item__head::before {
   display: table;
@@ -4664,6 +4676,7 @@ body {
 }
 
 .course-item__body thead {
+  font-family: "ALSSchlangeslab", Tahoma, sans-serif;
   font-weight: bold;
 }
 
@@ -4708,6 +4721,11 @@ body {
 
 .user-order.open {
   padding-bottom: 23px;
+}
+
+.user-order__head {
+  font-family: "ALSSchlangeslab", Tahoma, sans-serif;
+  font-weight: bold;
 }
 
 .user-order__head::after,
@@ -4776,6 +4794,7 @@ body {
 }
 
 .user-order__body thead {
+  font-family: "ALSSchlangeslab", Tahoma, sans-serif;
   font-weight: bold;
 }
 
@@ -6615,6 +6634,105 @@ body {
 .login .h2 {
   margin-top: 0;
   margin-bottom: 40px;
+}
+
+.fav-box__items {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 1px solid #e8e8e8;
+  border-top: none;
+  border-bottom: none;
+}
+
+.fav-box__head {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px 15px;
+  padding-left: 30px;
+  background: #636363;
+  color: #eeeeee;
+  font-family: "ALSSchlangeslab", Tahoma, sans-serif;
+  font-size: 0;
+  font-weight: bold;
+}
+
+.fav-box__item {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 1px 1px 0;
+  padding: 20px 15px;
+  padding-left: 30px;
+  border-top: 6px solid #aaebe8;
+  border-bottom: 1px solid #e8e8e8;
+  font-size: 0;
+}
+
+.fav-box__item--yellow {
+  border-top: 6px solid #ffcb08;
+}
+
+.fav-box__name,
+.fav-box__price,
+.fav-box__counter,
+.fav-box__amount,
+.fav-box__btn,
+.fav-box__del {
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 14px;
+}
+
+.fav-box__name {
+  width: 31%;
+  text-align: left;
+}
+
+.fav-box__name b {
+  display: block;
+  padding-bottom: 10px;
+}
+
+.fav-box__price {
+  width: 15%;
+  min-width: 100px;
+}
+
+.fav-box__counter {
+  width: 15%;
+  min-width: 100px;
+}
+
+.fav-box__counter .counter {
+  margin: 0 auto;
+}
+
+.fav-box__amount {
+  width: 15%;
+  min-width: 100px;
+}
+
+.fav-box__btn {
+  width: 15%;
+}
+
+.fav-box__del {
+  width: 9%;
+}
+
+.fav-box__price-value {
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-right: 25px;
+  background: url("../img/icon-ruble-black.png") right top no-repeat;
+  -webkit-background-size: 19px 19px;
+          background-size: 19px;
+  color: #323232;
+  font-family: "HouschkaRounded", Tahoma, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 20px;
 }
 
 /*=== страницы ===*/
