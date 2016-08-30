@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>Личный кабинет - Код активации | Большие надежды</title>
+  <title>Личный кабинет - Мои заказы | Большие надежды</title>
   <meta name="format-detection" content="telephone=no">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
@@ -184,31 +184,138 @@
     </div>
 
     <div class="container">
-      <section class="user user--student">
+      <section class="user">
         <div class="page-head">
           <h1 class="user__title h1 h1--line">Личный кабинет</h1>
           <div class="user__greetings">
-            Привет, <img src="img/student.jpg" alt="Роман Литвинов" width="47" height="47"> Роман Литвинов
-          </div>
-          <div class="user__bill">
-            Мой счет: <span class="user__bill-value">0</span><span class="user__bill-currency">бб</span>
+            Добро пожаловать, <img src="img/founder-photo.jpg" alt="" width="47" height="47"> Эльвира Пикалева
           </div>
         </div>
         <div class="user__body">
           <aside class="user__nav">
             <ul class="sidebar-nav">
-              <li><a href="#">Мои курсы</a></li>
-              <li><a href="#">Мои бонусы</a></li>
+              <li class="active">Мои заказы</li>
               <li><a href="#">Мои данные</a></li>
-              <li class="active">Активация курса</li>
+              <li><a href="#">Список желаемого</a></li>
             </ul>
           </aside>
           <div class="user__base-info">
-            <h2 class="h2 h2--line h2--left">Актвация курса</h2>
-            <p>Чтобы купленный курс появился в вашем личном кабинете, введите код авторизации, который выдается при покупке курса или модуля. Если вы ничего не приобретали, запросите код у того, кто купил его для вас.</p>
-            <div class="activation-form">
-              <div class="activation-form__success">Курс успешно активирован <span class="activation-form__instr">Проверьте раздел &laquo;Мои курсы&raquo;</span></div>
-              <a href="#" class="activation-form__link">Активировать еще один код</a>
+            <h2 class="h2 h2--line h2--left">Мои заказы</h2>
+            <div class="user-orders">
+              <div class="user-order">
+                <div class="user-order__head js-messages-collapse">
+                  <h3 class="user-order__title">Заказ №12345 от 20.07.2016 – Курс «Я – Генеральный директор». </h3>
+                  <div class="user-order__status-wrap">
+                    <div class="user-order__status">Статус: Действующий</div>
+                    <button class="btn-expend"><svg xmlns="http://www.w3.org/2000/svg" viewBox="-182 166.6 246.6 460.4"><style>.st0{stroke:#000;stroke-width:10;stroke-miterlimit:10; fill:#323232;}</style><path class="st0" d="M32.8 171.4c3.2-3.2 7.1-4.8 11.5-4.8s8.3 1.6 11.5 4.8c6.4 6.4 6.4 16.7 0 23l-202.4 202.4L55.8 599.2c6.4 6.4 6.4 16.7 0 23-6.4 6.4-16.7 6.4-23 0l-214-213.9c-6.4-6.4-6.4-16.7 0-23l214-213.9z"/></svg></button>
+                  </div>
+                </div>
+                <div class="user-order__body">
+                  <table>
+                    <thead>
+                      <tr>
+                        <td>Название курса</td>
+                        <td>Дата оплаты</td>
+                        <td>Сумма</td>
+                        <td>Код доступа</td>
+                        <td>Статус активации</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                      <td>1. Я – генеральный директор</td>
+                      <td>12.08.2016</td>
+                      <td><span class="user-order__priсe">50 000</span></td>
+                      <td>ZlBeO9E3 <a href="#" class="user-order__link-send" data-text="Отправить на e-mail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 486.736 486.736" width="22" height="16"><path d="M481.883 61.238l-474.3 171.4c-8.8 3.2-10.3 15-2.6 20.2l70.9 48.4 321.8-169.7-272.4 203.4v82.4c0 5.6 6.3 9 11 5.9l60-39.8 59.1 40.3c5.4 3.7 12.8 2.1 16.3-3.5l214.5-353.7c1.8-2.9-1.1-6.5-4.3-5.3z" fill="#909090"/></svg></a></td>
+                      <td><span class="user-order__active">Активировать</span></td>
+                    </tr>
+                    <tr>
+                      <td>2. Я – директор</td>
+                      <td>20.08.2016</td>
+                      <td><span class="user-order__priсe">40 000</span></td>
+                      <td>kR84pQcF <a href="#" class="user-order__link-send" data-text="Отправить на e-mail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 486.736 486.736" width="22" height="16"><path d="M481.883 61.238l-474.3 171.4c-8.8 3.2-10.3 15-2.6 20.2l70.9 48.4 321.8-169.7-272.4 203.4v82.4c0 5.6 6.3 9 11 5.9l60-39.8 59.1 40.3c5.4 3.7 12.8 2.1 16.3-3.5l214.5-353.7c1.8-2.9-1.1-6.5-4.3-5.3z" fill="#909090"/></svg></a></td>
+                      <td><span class="user-order__waiting">Ждет активации</span></td>
+                    </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="user-order">
+                <div class="user-order__head js-messages-collapse">
+                  <h3 class="user-order__title">Заказ №12345 от 20.07.2016 – Курс «Я – Генеральный директор». </h3>
+                  <div class="user-order__status-wrap">
+                    <div class="user-order__status">Статус: Действующий</div>
+                    <button class="btn-expend"><svg xmlns="http://www.w3.org/2000/svg" viewBox="-182 166.6 246.6 460.4"><style>.st0{stroke:#000;stroke-width:10;stroke-miterlimit:10; fill:#323232;}</style><path class="st0" d="M32.8 171.4c3.2-3.2 7.1-4.8 11.5-4.8s8.3 1.6 11.5 4.8c6.4 6.4 6.4 16.7 0 23l-202.4 202.4L55.8 599.2c6.4 6.4 6.4 16.7 0 23-6.4 6.4-16.7 6.4-23 0l-214-213.9c-6.4-6.4-6.4-16.7 0-23l214-213.9z"/></svg></button>
+                  </div>
+                </div>
+                <div class="user-order__body">
+                  <table>
+                    <thead>
+                      <tr>
+                        <td>Название курса</td>
+                        <td>Дата оплаты</td>
+                        <td>Сумма</td>
+                        <td>Код доступа</td>
+                        <td>Статус активации</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                      <td>1. Я – генеральный директор</td>
+                      <td>12.08.2016</td>
+                      <td><span class="user-order__priсe">50 000</span></td>
+                      <td>ZlBeO9E3 <a href="#" class="user-order__link-send" data-text="Отправить на e-mail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 486.736 486.736" width="22" height="16"><path d="M481.883 61.238l-474.3 171.4c-8.8 3.2-10.3 15-2.6 20.2l70.9 48.4 321.8-169.7-272.4 203.4v82.4c0 5.6 6.3 9 11 5.9l60-39.8 59.1 40.3c5.4 3.7 12.8 2.1 16.3-3.5l214.5-353.7c1.8-2.9-1.1-6.5-4.3-5.3z" fill="#909090"/></svg></a></td>
+                      <td><span class="user-order__active">Активировать</span></td>
+                    </tr>
+                    <tr>
+                      <td>2. Я – директор</td>
+                      <td>20.08.2016</td>
+                      <td><span class="user-order__priсe">40 000</span></td>
+                      <td>kR84pQcF <a href="#" class="user-order__link-send" data-text="Отправить на e-mail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 486.736 486.736" width="22" height="16"><path d="M481.883 61.238l-474.3 171.4c-8.8 3.2-10.3 15-2.6 20.2l70.9 48.4 321.8-169.7-272.4 203.4v82.4c0 5.6 6.3 9 11 5.9l60-39.8 59.1 40.3c5.4 3.7 12.8 2.1 16.3-3.5l214.5-353.7c1.8-2.9-1.1-6.5-4.3-5.3z" fill="#909090"/></svg></a></td>
+                      <td><span class="user-order__waiting">Ждет активации</span></td>
+                    </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="user-order">
+                <div class="user-order__head js-messages-collapse">
+                  <h3 class="user-order__title">Заказ №12346 от 20.07.2016 – Курс «Я – Генеральный директор». </h3>
+                  <div class="user-order__status-wrap">
+                    <div class="user-order__status">Статус: Закончившийся</div>
+                    <button class="btn-expend"><svg xmlns="http://www.w3.org/2000/svg" viewBox="-182 166.6 246.6 460.4"><style>.st0{stroke:#000;stroke-width:10;stroke-miterlimit:10; fill:#323232;}</style><path class="st0" d="M32.8 171.4c3.2-3.2 7.1-4.8 11.5-4.8s8.3 1.6 11.5 4.8c6.4 6.4 6.4 16.7 0 23l-202.4 202.4L55.8 599.2c6.4 6.4 6.4 16.7 0 23-6.4 6.4-16.7 6.4-23 0l-214-213.9c-6.4-6.4-6.4-16.7 0-23l214-213.9z"/></svg></button>
+                  </div>
+                </div>
+                <div class="user-order__body">
+                  <table>
+                    <thead>
+                      <tr>
+                        <td>Название курса</td>
+                        <td>Дата оплаты</td>
+                        <td>Сумма</td>
+                        <td>Код доступа</td>
+                        <td>Статус активации</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                      <td>1. Я – генеральный директор</td>
+                      <td>12.08.2016</td>
+                      <td><span class="user-order__priсe">50 000</span></td>
+                      <td>ZlBeO9E3 <a href="#" class="user-order__link-send" data-text="Отправить на e-mail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 486.736 486.736" width="22" height="16"><path d="M481.883 61.238l-474.3 171.4c-8.8 3.2-10.3 15-2.6 20.2l70.9 48.4 321.8-169.7-272.4 203.4v82.4c0 5.6 6.3 9 11 5.9l60-39.8 59.1 40.3c5.4 3.7 12.8 2.1 16.3-3.5l214.5-353.7c1.8-2.9-1.1-6.5-4.3-5.3z" fill="#909090"/></svg></a></td>
+                      <td><span class="user-order__active">Активировать</span></td>
+                    </tr>
+                    <tr>
+                      <td>2. Я – директор</td>
+                      <td>20.08.2016</td>
+                      <td><span class="user-order__priсe">40 000</span></td>
+                      <td>kR84pQcF <a href="#" class="user-order__link-send" data-text="Отправить на e-mail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 486.736 486.736" width="22" height="16"><path d="M481.883 61.238l-474.3 171.4c-8.8 3.2-10.3 15-2.6 20.2l70.9 48.4 321.8-169.7-272.4 203.4v82.4c0 5.6 6.3 9 11 5.9l60-39.8 59.1 40.3c5.4 3.7 12.8 2.1 16.3-3.5l214.5-353.7c1.8-2.9-1.1-6.5-4.3-5.3z" fill="#909090"/></svg></a></td>
+                      <td><span class="user-order__waiting">Ждет активации</span></td>
+                    </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -287,6 +394,18 @@
       </div>
     </div>
   </footer>
-  <script src="js/user-account-student-base/script.min.js"></script>
+  <!-- Модальное окно "Отправка кода" -->
+  <div class="modal modal-open">
+    <div class="modal-content modal-content--success">
+      <button class="js-modal-close" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="9" height="9" viewBox="0 0 20 20"><path fill="#000" d="M20 1.543L18.457 0l-8.456 8.457L1.542 0 0 1.543l8.456 8.456L0 18.455 1.542 20l8.459-8.459L18.457 20 20 18.455l-8.457-8.456z"/></svg></button>
+      <!-- Контент модального окна -->
+      <div class="send-success">
+        <p><b>Отправка кода</b></p>
+        <p>Код активации успешно отправлен.</p>
+        <button class="btn btn--ok" type="button">Ок</button>
+      </div>
+    </div>
+  </div>
+  <script src="js/script.min.js"></script>
 </body>
 </html>

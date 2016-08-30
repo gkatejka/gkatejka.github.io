@@ -410,23 +410,28 @@ d.slice(e-c+1,e+c+2).addClass("slick-active").attr("aria-hidden","false")),0===a
   
   $('form.form').on('submit', function(){
     var _empty = true;
-    
+    $('input').removeClass('input-error');
+	
     $('input.text-validate').each(function(){
       if ($.trim($(this).val()) == ''){
-        _empty = false;
+        $(this).addClass('input-error');
+		_empty = false;
       }
     });
     $('input.email-validate').each(function(){
       if ($.trim($(this).val()) == ''){
-        _empty = false;
+        $(this).addClass('input-error');
+		_empty = false;
       }
     });
     if ($.trim($('input.pass-validate').val()) == ''){
-      _empty = false;
+      $('input.pass-validate').addClass('input-error');
+	  _empty = false;
     }
     $('input.pass-validate-re').each(function(){
       if ($.trim($(this).val()) == ''){
-        _empty = false;
+        $(this).addClass('input-error');
+		_empty = false;
       }
     });
     

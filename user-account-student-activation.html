@@ -207,9 +207,11 @@
             <h2 class="h2 h2--line h2--left">Актвация курса</h2>
             <p>Чтобы купленный курс появился в вашем личном кабинете, введите код авторизации, который выдается при покупке курса или модуля. Если вы ничего не приобретали, запросите код у того, кто купил его для вас.</p>
             <div class="activation-form">
+              <div class="activation-form__success hide">Курс успешно активирован <span class="activation-form__instr">Проверьте раздел &laquo;Мои курсы&raquo;</span></div>
               <form action="/echo" class="form">
                 <input type="text" placeholder="Введите код активации" class="activation-form__code">
                 <button type="submit" class="btn btn--submit btn--yellow">Активировать</button>
+                <div class="activation-form__error"></div>
               </form>
               <a href="#" class="activation-form__link">Активировать еще один код</a>
             </div>
@@ -290,6 +292,6 @@
       </div>
     </div>
   </footer>
-  <script src="js/user-account-student-base/script.min.js"></script>
+  <script src="js/user-account-student-activation/script.min.js"></script>
 </body>
 </html>

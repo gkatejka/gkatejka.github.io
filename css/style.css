@@ -1266,6 +1266,13 @@ h2--left::after,
           transform: scale(0.6);
 }
 
+.btn--ok {
+  padding-right: 25px;
+  padding-left: 25px;
+  outline: none;
+  border: none;
+}
+
 .form {
   font-size: 0;
 }
@@ -1485,49 +1492,94 @@ body {
 
 .modal-content {
   position: absolute;
-  top: 100px;
+  top: 40%;
   left: 50%;
-  width: 600px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 435px;
   margin-bottom: 50px;
-  padding: 15px;
+  border-top: 10px solid #aaebe8;
+  background: #ffffff;
   -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
           box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
   -webkit-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
           transform: translateX(-50%);
+  text-align: center;
 }
 
-.modal-content--share {
-  width: 310px;
-  padding: 15px 0;
+.modal-content--success {
+  padding: 20px 40px 35px;
 }
 
-.modal-content--friends {
-  width: 310px;
-  padding: 0;
+.modal-content--success p {
+  margin: 0;
+  padding: 0 0 15px;
 }
 
-.modal-content--null {
-  padding: 0;
+.modal-content--success .btn {
+  margin-top: 10px;
 }
 
-.modal-content--photo {
-  padding: 0;
-  border: none;
+.modal-content--send {
+  width: 570px;
+  padding: 0 0  45px;
+  border-top: 5px solid #aaebe8;
+  background: #f7f9fa;
 }
 
 .modal-open {
   display: block;
 }
 
-.js-modal-close {
+.send-code__title {
+  margin-bottom: 45px;
+  padding-bottom: 5px;
+  background: #aaebe8;
+  text-align: center;
+  font-family: "ALSSchlangeslab", Tahoma, sans-serif;
+  font-size: 25px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.send-code__body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0 80px;
+  font-size: 14px;
+}
+
+.send-code form {
+  padding-top: 15px;
+}
+
+.send-code input[type="email"] {
+  float: left;
+  width: 65%;
+}
+
+.send-code .btn {
+  float: right;
+}
+
+.btn-modal-close {
   position: absolute;
-  top: 0;
-  right: -40px;
+  top: -20px;
+  right: -10px;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  outline: none;
   border: 0;
-  background: transparent;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  background: #ffcb08;
   -webkit-box-shadow: none;
           box-shadow: none;
+  cursor: pointer;
+  text-align: center;
+  line-height: 22px;
 }
 
 /*=== компоненты ===*/
