@@ -1350,6 +1350,13 @@ h2--left::after,
   text-align: right;
 }
 
+.form__error {
+  padding-left: 10px;
+  color: #d95e40;
+  font-size: 12px;
+  line-height: 1.8;
+}
+
 input[type="text"],
 input[type="tel"],
 input[type="email"],
@@ -1367,6 +1374,14 @@ textarea {
   color: #323232;
   font-size: 14px;
   line-height: 1.4;
+}
+
+input[type="text"].input-error,
+input[type="tel"].input-error,
+input[type="email"].input-error,
+input[type="password"].input-error,
+textarea.input-error {
+  border-color: #ed4848;
 }
 
 textarea {
@@ -1418,6 +1433,34 @@ input[type="radio"]:checked + label::before {
   -webkit-background-size: 345px 30px;
           background-size: 345px 30px;
   content: "";
+}
+
+div.hideShowPassword-wrapper {
+  position: relative;
+  display: block;
+  margin: 0;
+  vertical-align: middle;
+}
+
+div.hideShowPassword-btn {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 44px;
+  height: 100%;
+  margin-top: -17px;
+  cursor: pointer;
+  -webkit-user-select: none;
+}
+
+input.hideShowPassword-input {
+  padding-right: 44px;
+}
+
+input.hideShowPassword-input.active-eye {
+  background: url("../img/icon-pass-eye.png") 97% 12px no-repeat #f7f9fa;
+  -webkit-background-size: 16px 8px;
+          background-size: 16px 8px;
 }
 
 html,
@@ -4101,6 +4144,10 @@ body {
   vertical-align: middle;
 }
 
+.user--student .user__greetings {
+  padding-left: 60px;
+}
+
 .user__body {
   padding-top: 55px;
 }
@@ -6425,7 +6472,7 @@ body {
 .form-login input[type="email"],
 .form-login input[type="password"] {
   width: 100%;
-  margin-bottom: 24px;
+  margin-top: 24px;
   padding: 6px 10px;
   background: #ffffff;
 }
@@ -6442,6 +6489,7 @@ body {
 }
 
 .form-login__check {
+  margin-top: 24px;
   margin-bottom: 20px;
   padding-left: 15px;
   font-size: 0;

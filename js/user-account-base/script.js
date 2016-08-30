@@ -443,6 +443,23 @@ d.slice(e-c+1,e+c+2).addClass("slick-active").attr("aria-hidden","false")),0===a
 
 }());
 
+'use strict';
+
+(function() {
+  var messagesCollapse = document.querySelectorAll('.js-messages-collapse');
+
+  if (messagesCollapse) {
+    messagesCollapse = Array.prototype.slice.call(messagesCollapse, 0);
+
+    messagesCollapse.forEach(function(item) {
+      item.addEventListener('click', function(event) {
+        event.preventDefault();
+        item.parentNode.classList.toggle('open');
+      });
+    });
+  }
+})();
+
 (function(){
   renderScroll("#scroll-w1", ".shop-box--fav");
   renderScroll("#scroll-w2", ".shop-box--bag");

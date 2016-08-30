@@ -187,14 +187,14 @@
       <section class="login">
       <h1 class="h1 h1--line">Регистрация аккаунта</h1>
         <div class="form-login">
-          <form action="/echo">
+          <form action="/echo" class="form">
             <h2 class="h2 h2--line">Присоединяйтесь к нам</h2>
             <div class="form-login__group">
-              <input type="email" placeholder="Ваш e-mail">
-              <input type="text" placeholder="Ваше имя">
-              <input type="text" placeholder="Ваше фамилия">
-              <input type="password" maxlength="10" placeholder="Пароль">
-              <input type="password" maxlength="10" placeholder="Повторите пароль">
+              <input type="email" placeholder="Ваш e-mail" class="js-email-validate">
+              <input type="text" placeholder="Ваше имя" class="js-first-name-validate">
+              <input type="text" placeholder="Ваша фамилия" class="js-last-name-validate">
+              <input type="password" maxlength="10" placeholder="Пароль" class="js-pass-validate">
+              <input type="password" maxlength="10" placeholder="Повторите пароль" class="js-re-pass-validate">
             </div>
             <div class="form-login__check">
               <b>Тип профиля:</b>
@@ -303,6 +303,6 @@
       </div>
     </div>
   </footer>
-  <script src="js/main/script.js"></script>
+  <script src="js/sigin/script.min.js"></script>
 </body>
 </html>

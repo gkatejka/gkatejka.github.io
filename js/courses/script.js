@@ -213,7 +213,17 @@ d.slice(e-c+1,e+c+2).addClass("slick-active").attr("aria-hidden","false")),0===a
     var idProgram = $(this).parent().attr('data-program-id'),
       _this = this;
     
-    if ($(this).hasClass('programs__btn-fav--active')) return;
+    if ($(this).hasClass('programs__btn-fav--active')){
+		$.get('/api/programs/del-in-fav.json?id=' + idProgram, function(response){
+		  if (response.status == 'ok'){
+			var count = Number($('.shop-btn__icon--fav .shop-btn__counter').text());
+			$('.shop-btn__icon--fav .shop-btn__counter').text(--count);
+			$(_this).removeClass('programs__btn-fav--active');
+			renderFav();
+		  }
+		});
+		return;
+	}
     
     $.get('/api/programs/add-me-fav.json?id=' + idProgram, function(response){
       if (response.status == 'ok'){
