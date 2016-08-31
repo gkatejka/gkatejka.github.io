@@ -1,16 +1,1 @@
-{"status":"ok", "items": [{
-	"id": "1",
-	"type": "green",
-	"title": "Я - владелец бизнеса",
-	"subtitle": "Я - владелец бизнеса",
-	"price": "9000",
-	"count": "1"
-},{
-	"id": "2",
-	"type": "yellow",
-	"title": "Я - владелец бизнеса",
-	"subtitle": "Я - владелец бизнеса",
-	"price": "4500",
-	"count": "3"
-}
-]}
+{"status":"ok"}

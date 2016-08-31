@@ -199,15 +199,25 @@ d.slice(e-c+1,e+c+2).addClass("slick-active").attr("aria-hidden","false")),0===a
       openModalBtn.addEventListener('click', function(event) {
         event.preventDefault();
         var targetModal;
+        var programId;
         if (openModalBtn.dataset.target) {
           targetModal = document.querySelector(openModalBtn.dataset.target);
         } else {
           targetModal = document.querySelector('.modal');
         }
+		if (openModalBtn.dataset.programOrderId) {
+          programId = openModalBtn.dataset.programOrderId;
+        } else {
+          programId = null;
+		}
         if (targetModal) {
           closeModal();
           targetModal.classList.add('modal-open');
           body.classList.add('body-modal');
+		  
+		  if (programId !== null && targetModal.querySelector('.btn--submit')){
+			targetModal.querySelector('.btn--submit').dataset.programOrderId = programId;
+		  }
 
           var modalCloseBtn = targetModal.querySelector('.js-modal-close');
           modalCloseBtn.addEventListener('click', modalCloseBtnEvent);

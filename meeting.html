@@ -277,25 +277,25 @@
       </div>
     </section>
 
-    <section class="meeting-form">
+    <section class="meeting-form" id="target-meeting-form">
       <div class="container">
         <h2 class="h2 h2--line">Забронируйте место на семинаре</h2>
         <div class="meeting-form__form-wrap">
           <form action="/echo" class="form">
             <div class="form__row">
               <div class="form__col">
-                <input type="text" placeholder="Ваше имя *">
+                <input type="text" placeholder="Ваше имя *" class="js-text-validate js-nameL-input">
               </div>
               <div class="form__col">
-                <input type="text" placeholder="Фамилия *">
+                <input type="text" placeholder="Фамилия *" class="js-text-validate js-nameF-input">
               </div>
             </div>
             <div class="form__row">
               <div class="form__col">
-                <input type="email" placeholder="E-mail *">
+                <input type="email" placeholder="E-mail *" class="js-email-validate">
               </div>
               <div class="form__col">
-                <input type="tel" placeholder="Телефон *">
+                <input type="tel" placeholder="Телефон *" class="js-input-tel js-text-validate">
               </div>
             </div>
             <div class="form__row form__row--center">
@@ -382,6 +382,19 @@
       </div>
     </div>
   </footer>
-  <script src="js/script.min.js"></script>
+  <!-- Модальное окно "Отправка кода" -->
+  <div class="modal modal-alert">
+    <div class="modal-content modal-content--success">
+      <button class="js-modal-close btn-modal-close" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="9" height="9" viewBox="0 0 20 20"><path fill="#000" d="M20 1.543L18.457 0l-8.456 8.457L1.542 0 0 1.543l8.456 8.456L0 18.455 1.542 20l8.459-8.459L18.457 20 20 18.455l-8.457-8.456z"/></svg></button>
+      <!-- Контент модального окна -->
+      <div class="send-success">
+        <p class="alert-title"><b>Внимание!</b></p>
+        <p class="alert-text"></p>
+        <button class="btn btn--ok" type="button">Ок</button>
+      </div>
+    </div>
+  </div>
+  <span class="js-get-modal js-get-modal-add hide" data-target=".modal-alert"></span>
+  <script src="js/meeting/script.min.js"></script>
 </body>
 </html>

@@ -307,6 +307,19 @@
       </div>
     </div>
   </footer>
+  <!-- Модальное окно "Отправка кода" -->
+  <div class="modal modal-alert">
+    <div class="modal-content modal-content--success">
+      <button class="js-modal-close btn-modal-close" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="9" height="9" viewBox="0 0 20 20"><path fill="#000" d="M20 1.543L18.457 0l-8.456 8.457L1.542 0 0 1.543l8.456 8.456L0 18.455 1.542 20l8.459-8.459L18.457 20 20 18.455l-8.457-8.456z"/></svg></button>
+      <!-- Контент модального окна -->
+      <div class="send-success">
+        <p><b>Внимание!</b></p>
+        <p class="alert-text"></p>
+        <button class="btn btn--ok" type="button">Ок</button>
+      </div>
+    </div>
+  </div>
+  <span class="js-get-modal js-get-modal-add hide" data-target=".modal-alert"></span>
   <script src="js/user-account-student-base/script.min.js"></script>
 </body>
 </html>

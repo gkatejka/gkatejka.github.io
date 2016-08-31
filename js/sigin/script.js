@@ -243,9 +243,6 @@ d.slice(e-c+1,e+c+2).addClass("slick-active").attr("aria-hidden","false")),0===a
 			$('.js-pass-validate').addClass('input-error');
 			$('.js-re-pass-validate').addClass('input-error');
 			$('.js-re-pass-validate').after('<div class="form__error">Пароли должны совпадать</div>');
-		} else {
-			$('.js-pass-validate').removeClass('input-error');
-			$('.js-re-pass-validate').removeClass('input-error');
 		}
 		
 		if (!_valid) return false;

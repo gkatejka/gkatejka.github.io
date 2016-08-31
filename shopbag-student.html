@@ -57,16 +57,88 @@
     </div>
 
     <div class="container">
-      <section class="shop-bag">
+      <section class="shopbag">
         <h1 class="h1 h1--line">Ваша корзина</h1>
-        <ul class="shop-bag__head">
-          <li class="shop-bag__head-item">Ваша корзина</li>
-          <li class="shop-bag__head-item">Авторизация</li>
-          <li class="shop-bag__head-item">Выбор способа оплаты</li>
-          <li class="shop-bag__head-item">Подтверждение заказа</li>
+        <ul class="shopbag__head">
+          <li class="shopbag__head-item shopbag__head-item--active">Ваша корзина</li>
+          <li class="shopbag__head-item">Авторизация</li>
+          <li class="shopbag__head-item">Выбор способа оплаты</li>
+          <li class="shopbag__head-item">Подтверждение заказа</li>
         </ul>
-        <div class="shop-bag__items">
-          .shop-bag__items-head
+        <div class="shopbag__items">
+          <div class="shopbag__items-head">
+            <div class="shopbag__name">Названия курса</div>
+            <div class="shopbag__price">Цена</div>
+            <div class="shopbag__counter">Количество</div>
+            <div class="shopbag__amount">Сумма</div>
+            <div class="shopbag__del">Удалить</div>
+          </div>
+          <div class="shopbag__item shopbag__item--yellow">
+            <div class="shopbag__name">
+              <b>Я – управляю компанией</b>
+              <p>Научит открывать и развивать своё дело</p>
+            </div>
+            <div class="shopbag__price">
+              <span class="shopbag__price-value">10 000</span>
+            </div>
+            <div class="shopbag__counter">
+              <div class="counter">
+                <div class="counter__minus"></div>
+                <div class="counter__num">5</div>
+                <div class="counter__plus"></div>
+              </div>
+            </div>
+            <div class="shopbag__amount">
+              <span class="shopbag__price-value">50 000</span>
+            </div>
+            <div class="shopbag__del">
+              <button class="btn-del"></button>
+            </div>
+          </div>
+          <div class="shopbag__item">
+            <div class="shopbag__name">
+              <b>Я – управляю компанией</b>
+              <p>Научит открывать и развивать своё дело</p>
+            </div>
+            <div class="shopbag__price">
+              <span class="shopbag__price-value">10 000</span>
+            </div>
+            <div class="shopbag__counter">
+              <div class="counter">
+                <div class="counter__minus"></div>
+                <div class="counter__num">5</div>
+                <div class="counter__plus"></div>
+              </div>
+            </div>
+            <div class="shopbag__amount">
+              <span class="shopbag__price-value">50 000</span>
+            </div>
+            <div class="shopbag__del">
+              <button class="btn-del"></button>
+            </div>
+          </div>
+        </div>
+        <div class="shopbag__bottom">
+          <div class="shopbag__amounts">
+            <b>Итого:</b>
+            <div class="shopbag__amounts-row">
+              <div class="shopbag__amounts-text">Курсов на сумму:</div>
+              <div class="shopbag__amounts-price"><span class="shopbag__price-value">15 000</span></div>
+            </div>
+            <div class="shopbag__amounts-row">
+              <div class="shopbag__amounts-text">Курсов на сумму:</div>
+              <div class="shopbag__amounts-price"><span class="current-price">15 000</span></div>
+            </div>
+            <a href="#" class="btn">Перейти к оплате</a>
+          </div>
+          <div class="shopbag__place">
+            <b>Школа, где получить:</b>
+            <select>
+              <option disabled selected>Выберите свою школу</option>
+              <option>Санкт-Петербург</option>
+              <option>Москва</option>
+            </select>
+          </div>
         </div>
       </section>
     </div>

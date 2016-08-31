@@ -1533,6 +1533,11 @@ body {
   display: block;
 }
 
+.send-success__title {
+  font-family: "ALSSchlangeslab", Tahoma, sans-serif;
+  font-weight: bold;
+}
+
 .send-code__title {
   margin-bottom: 45px;
   padding-bottom: 5px;
@@ -3808,7 +3813,7 @@ body {
 }
 
 .expert-advice {
-  padding: 45px 0 15px;
+  padding: 0 0 15px;
 }
 
 .expert-advice__title {
@@ -6639,9 +6644,8 @@ body {
 .fav-box__items {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  border: 1px solid #e8e8e8;
-  border-top: none;
-  border-bottom: none;
+  border-right: 1px solid #e8e8e8;
+  border-left: 1px solid #e8e8e8;
 }
 
 .fav-box__head {
@@ -6733,6 +6737,305 @@ body {
   font-size: 14px;
   font-weight: bold;
   line-height: 20px;
+}
+
+.shopbag {
+  margin-bottom: 75px;
+}
+
+.shopbag__head {
+  z-index: 5;
+  margin: 0;
+  margin-bottom: 55px;
+  padding: 0;
+  -webkit-border-radius: 40px;
+          border-radius: 40px;
+  background: #f7f9fa;
+  list-style: none;
+  font-size: 0;
+}
+
+.shopbag__head-item {
+  position: relative;
+  z-index: 12;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 25%;
+  -webkit-border-radius: 40px;
+          border-radius: 40px;
+  background: #f7f9fa;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.shopbag__head-item::before {
+  position: absolute;
+  top: 50%;
+  right: 22px;
+  z-index: 12;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 7px;
+  height: 7px;
+  margin-top: -4px;
+  border-top: 2px solid #d1d1d1;
+  border-left: 2px solid #d1d1d1;
+  content: "";
+  -webkit-transform: rotate(135deg);
+      -ms-transform: rotate(135deg);
+          transform: rotate(135deg);
+}
+
+.shopbag__head-item::after {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  z-index: 10;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 30px;
+  height: 30px;
+  margin-top: -15px;
+  margin-bottom: -15px;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  background: #ffffff;
+  content: "";
+}
+
+.shopbag__head-item:last-child {
+  border-right: none;
+}
+
+.shopbag__head-item--current,
+.shopbag__head-item--actived {
+  background: #aaebe8;
+}
+
+.shopbag__head-item--current::before,
+.shopbag__head-item--actived::before {
+  border-color: #00c5bd;
+}
+
+.shopbag__head-item--actived {
+  -webkit-border-radius: 0;
+          border-radius: 0;
+}
+
+.shopbag__head-item--actived:first-child {
+  -webkit-border-radius: 40px 0 0 40px;
+          border-radius: 40px 0 0 40px;
+}
+
+.shopbag__head-item--current {
+  z-index: 15;
+  -webkit-border-radius: 0 40px 40px 0;
+          border-radius: 0 40px 40px 0;
+}
+
+.shopbag__head-item--current:first-child {
+  -webkit-border-radius: 40px;
+          border-radius: 40px;
+}
+
+.shopbag__head-item span {
+  display: block;
+  padding: 15px 25px;
+  border-right: 1px solid #d1d1d1;
+  -webkit-border-radius: 40px;
+          border-radius: 40px;
+}
+
+.shopbag--student .shopbag__head-item {
+  width: 33.333333%;
+}
+
+.shopbag__items {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-bottom: 25px;
+  border-right: 1px solid #e8e8e8;
+  border-left: 1px solid #e8e8e8;
+}
+
+.shopbag__items-head {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px 15px;
+  padding-left: 30px;
+  background: #636363;
+  color: #eeeeee;
+  font-family: "ALSSchlangeslab", Tahoma, sans-serif;
+  font-size: 0;
+  font-weight: bold;
+}
+
+.shopbag__name,
+.shopbag__price,
+.shopbag__counter,
+.shopbag__amount,
+.shopbag__del {
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 14px;
+}
+
+.shopbag__name {
+  width: 30%;
+  text-align: left;
+}
+
+.shopbag__name b {
+  display: block;
+  padding-bottom: 10px;
+}
+
+.shopbag__price {
+  width: 15%;
+}
+
+.shopbag__counter {
+  width: 25%;
+}
+
+.shopbag__counter .counter {
+  margin: 0 auto;
+}
+
+.shopbag__amount {
+  width: 20%;
+}
+
+.shopbag__del {
+  width: 10%;
+}
+
+.shopbag__item {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 1px 1px 0;
+  padding: 20px 15px;
+  padding-left: 30px;
+  border-top: 6px solid #aaebe8;
+  border-bottom: 1px solid #e8e8e8;
+  font-size: 0;
+}
+
+.shopbag__item--yellow {
+  border-top: 6px solid #ffcb08;
+}
+
+.shopbag__price-value {
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-right: 25px;
+  background: url("../img/icon-ruble-black.png") right top no-repeat;
+  -webkit-background-size: 19px 19px;
+          background-size: 19px;
+  color: #323232;
+  font-family: "HouschkaRounded", Tahoma, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 20px;
+}
+
+.shopbag__bottom::after,
+.shopbag__bottom::before {
+  display: table;
+  content: "";
+}
+
+.shopbag__bottom::after {
+  clear: both;
+}
+
+.shopbag__place {
+  float: right;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 50%;
+}
+
+.shopbag__amounts {
+  float: right;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 33.33333%;
+  text-align: right;
+}
+
+.shopbag__amounts b {
+  padding-right: 160px;
+  color: #323232;
+  font-family: "HouschkaRounded", Tahoma, sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.shopbag__amounts .btn {
+  margin-top: 30px;
+}
+
+.shopbag__amounts-row {
+  padding-top: 10px;
+  font-size: 0;
+}
+
+.shopbag__amounts-text {
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 50%;
+  text-align: right;
+  vertical-align: middle;
+  font-family: "ALSSchlangeslab", Tahoma, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.shopbag__amounts-price {
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 50%;
+  min-width: 160px;
+  max-width: 160px;
+  padding-left: 25px;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.shopbag__forms {
+  margin-right: -10px;
+  margin-left: -10px;
+}
+
+.shopbag__forms::after,
+.shopbag__forms::before {
+  display: table;
+  content: "";
+}
+
+.shopbag__forms::after {
+  clear: both;
+}
+
+.shopbag__forms-col {
+  float: left;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 50%;
+  padding: 0 20px;
+}
+
+.shopbag__forms-col .form-login {
+  width: 100%;
+  min-height: 770px;
+  margin-bottom: 0;
 }
 
 /*=== страницы ===*/

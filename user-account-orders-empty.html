@@ -280,6 +280,37 @@
       </div>
     </div>
   </footer>
-  <script src="js/script.min.js"></script>
+  <!-- Модальное окно "Отправка кода активации" -->
+  <div class="modal modal-send-code">
+    <div class="modal-content modal-content--send">
+      <button class="js-modal-close btn-modal-close" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="9" height="9" viewBox="0 0 20 20"><path fill="#000" d="M20 1.543L18.457 0l-8.456 8.457L1.542 0 0 1.543l8.456 8.456L0 18.455 1.542 20l8.459-8.459L18.457 20 20 18.455l-8.457-8.456z"/></svg></button>
+      <!-- Контент модального окна -->
+      <div class="send-code">
+        <div class="send-code__title">Отправка кода активации</div>
+        <div class="send-code__body">
+          <p>Отправьте код доступа ученику на его e-mail, по которому он сможет активировать купленный курс</p>
+          <form action="/echo" class="form">
+            <input type="email" placeholder="Введите email ученика*" class="js-email-validate">
+            <div class="form__error">Введите email</div>
+            <button class="btn btn--submit" type="submit" data-program-order-id="null">Отправить</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Модальное окно "Отправка кода" -->
+  <div class="modal modal-success-send">
+    <div class="modal-content modal-content--success">
+      <button class="js-modal-close btn-modal-close" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="9" height="9" viewBox="0 0 20 20"><path fill="#000" d="M20 1.543L18.457 0l-8.456 8.457L1.542 0 0 1.543l8.456 8.456L0 18.455 1.542 20l8.459-8.459L18.457 20 20 18.455l-8.457-8.456z"/></svg></button>
+      <!-- Контент модального окна -->
+      <div class="send-success">
+        <p><b>Отправка кода</b></p>
+        <p>Код активации успешно отправлен.</p>
+        <button class="btn btn--ok" type="button">Ок</button>
+      </div>
+    </div>
+  </div>
+  <span class="js-get-modal js-get-modal-add hide" data-target=".modal-success-send"></span>
+  <script src="js/user-account-orders/script.min.js"></script>
 </body>
 </html>

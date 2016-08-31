@@ -393,7 +393,7 @@ d.slice(e-c+1,e+c+2).addClass("slick-active").attr("aria-hidden","false")),0===a
     
     // Only process image files.
     if (!f.type.match('image.*')) {
-      alert("Image only please....");
+      alertM("Только картинки...");
     }
     var reader = new FileReader();
     // Closure to capture the file information.
@@ -436,17 +436,112 @@ d.slice(e-c+1,e+c+2).addClass("slick-active").attr("aria-hidden","false")),0===a
     });
     
     if (!_empty){
-      alert('Необходимо заполнить все поля!');
+      alertM('Необходимо заполнить все поля!');
       return false;
     }
     
     if ($($('input.pass-validate-re')[0]).val() != $($('input.pass-validate-re')[1]).val()){
-      alert('Новый пароль и его повтор не совпадают!');
+      alertM('Новый пароль и его повтор не совпадают!');
       return false;
     }
   });
+  
+  $('.modal-alert .btn--ok').on('click', function(){
+	$('.modal-alert .btn-modal-close').click();
+  });
+  
+  function alertM(_text){
+	$('.modal-alert p.alert-text').text(_text);
+	$('.js-get-modal-add').click();
+  }
 
 }());
+
+'use strict';
+
+(function() {
+  var openModalBtns = document.querySelectorAll('.js-get-modal');
+  if (openModalBtns) {
+    var body = document.querySelector('body');
+    openModalBtns = Array.prototype.slice.call(openModalBtns, 0);
+
+    openModalBtns.forEach(function(openModalBtn) {
+      openModalBtn.addEventListener('click', function(event) {
+        event.preventDefault();
+        var targetModal;
+        var programId;
+        if (openModalBtn.dataset.target) {
+          targetModal = document.querySelector(openModalBtn.dataset.target);
+        } else {
+          targetModal = document.querySelector('.modal');
+        }
+		if (openModalBtn.dataset.programOrderId) {
+          programId = openModalBtn.dataset.programOrderId;
+        } else {
+          programId = null;
+		}
+        if (targetModal) {
+          closeModal();
+          targetModal.classList.add('modal-open');
+          body.classList.add('body-modal');
+		  
+		  if (programId !== null && targetModal.querySelector('.btn--submit')){
+			targetModal.querySelector('.btn--submit').dataset.programOrderId = programId;
+		  }
+
+          var modalCloseBtn = targetModal.querySelector('.js-modal-close');
+          modalCloseBtn.addEventListener('click', modalCloseBtnEvent);
+          targetModal.addEventListener('click', modalCloseOverEvent);
+          window.addEventListener('keypress', modalCloseEscEvent);
+        }
+      });
+    });
+  }
+
+  /**
+   * Функция которая закрывает модальные окна, если они открыты
+   */
+  function closeModal() {
+    var closeModalTarget = document.querySelector('.modal-open');
+    if (closeModalTarget) {
+      closeModalTarget.classList.remove('modal-open');
+      document.querySelector('body').classList.remove('body-modal');
+      closeModalTarget.querySelector('.js-modal-close').removeEventListener('click', modalCloseBtnEvent);
+      closeModalTarget.removeEventListener('click', modalCloseOverEvent);
+      window.removeEventListener('keypress', modalCloseEscEvent);
+    }
+  }
+
+  /**
+   * Событие которое вызывается при закрытии модального окна по нажтию на кнопку.
+   * @param {Event} event default
+   */
+  function modalCloseBtnEvent(event) {
+    event.preventDefault();
+    closeModal();
+  }
+
+  /**
+   * Событие которое вызывается при закрытии модального окна при клике по оверлею.
+   * @param {Event} event default
+   * @param {Element} modal
+   */
+  function modalCloseOverEvent(event) {
+    if (event.target === document.querySelector('.modal-open')) {
+      closeModal();
+    }
+  }
+
+  /**
+   * Событие которое вызывается при закрытии модального окна при нажатии на ESC.
+   * @param {Event} event default
+   */
+  function modalCloseEscEvent(event) {
+    if (event.keyKode === 27) {
+      closeModal();
+    }
+  }
+})();
 
 (function(){
   renderScroll("#scroll-w1", ".shop-box--fav");
