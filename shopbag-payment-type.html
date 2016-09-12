@@ -86,8 +86,7 @@
                         <div class="shop-box__item-del">
                           <button class="btn-del" data-program-id="1"></button>
                         </div>
-                      </div>
-                      <div class="shop-box__item">
+                      </div><div class="shop-box__item">
                         <div class="shop-box__item-text">
                           <div class="shop-box__item-title">Я - управляю компанией</div>
                           <div class="shop-box__item-descr">Научит открывать и развиватьсвоё дело</div>
@@ -188,80 +187,68 @@
         <h1 class="h1 h1--line">Ваша корзина</h1>
         <ul class="shopbag__head">
           <li class="shopbag__head-item shopbag__head-item--actived"><span>Ваша корзина</span></li>
-          <li class="shopbag__head-item shopbag__head-item--current"><span>Авторизация</span></li>
-          <li class="shopbag__head-item"><span>Выбор способа оплаты</span></li>
+          <li class="shopbag__head-item shopbag__head-item--actived"><span>Авторизация</span></li>
+          <li class="shopbag__head-item shopbag__head-item--current"><span>Выбор способа оплаты</span></li>
           <li class="shopbag__head-item"><span>Подтверждение заказа</span></li>
         </ul>
-        <div class="shopbag__items">
-          <div class="shopbag__items-head">
-            <div class="shopbag__name">Названия курса</div>
-            <div class="shopbag__price">Цена</div>
-            <div class="shopbag__counter">Количество</div>
-            <div class="shopbag__amount">Сумма</div>
-            <div class="shopbag__del">Удалить</div>
-          </div>
-          <div class="shopbag__item shopbag__item--yellow">
-            <div class="shopbag__name">
-              <b>Я – управляю компанией</b>
-              <p>Научит открывать и развивать своё дело</p>
-            </div>
-            <div class="shopbag__price">
-              <span class="shopbag__price-value">10 000</span>
-            </div>
-            <div class="shopbag__counter">
-              <div class="counter">
-                <div class="counter__minus"></div>
-                <div class="counter__num">5</div>
-                <div class="counter__plus"></div>
+        <form action="/echo" class="form">
+          <div class="shopbag__payment">
+            <div class="payment-types">
+              <h2 class="h2 h2--left">Способы оплаты</h2>
+              <div class="payment-types__item">
+                <input type="radio" name="payment-type" id="payment-type-1" checked>
+                <label for="payment-type-1">Оплата в школе наличными</label>
+                <p>Надичными, банковской картой или подарочной картой</p>
+                <select>
+                  <option disabled selected>Выберите свою школу</option>
+                  <option>Санкт-Петербург</option>
+                  <option>Москва</option>
+                </select>
+              </div>
+              <div class="payment-types__item">
+                <input type="radio" name="payment-type" id="payment-type-2">
+                <label for="payment-type-2">Онлайн-оплата</label>
+                <p>Онлайн-оплата</p>
+                <p>Оплата заказа онлайн через платежную систему банка «Сбербанк». К оплате принимаются карты Visa, MasterCard.</p>
+                <div class="payment-types__attention">
+                  <b>Важно!</b>
+                  <ul>
+                    <li>Онлайн-оплату покупки необходимо совершить в течение 24 часов после оформления заказа.</li>
+                    <li>Если оплата не проведена в срок, заказ автоматически обнуляется.</li>
+                    <li>Во избежание получения товара третьими лицами, выдача товара производится только контактному лицу, указанному в заказе.</li>
+                  </ul>
+                </div>
               </div>
             </div>
-            <div class="shopbag__amount">
-              <span class="shopbag__price-value">50 000</span>
-            </div>
-            <div class="shopbag__del">
-              <button class="btn-del"></button>
-            </div>
-          </div>
-          <div class="shopbag__item">
-            <div class="shopbag__name">
-              <b>Я – управляю компанией</b>
-              <p>Научит открывать и развивать своё дело</p>
-            </div>
-            <div class="shopbag__price">
-              <span class="shopbag__price-value">10 000</span>
-            </div>
-            <div class="shopbag__counter">
-              <div class="counter">
-                <div class="counter__minus"></div>
-                <div class="counter__num">5</div>
-                <div class="counter__plus"></div>
+            <div class="payment-amounts">
+              <h2 class="h2 h2--left">Итого:</h2>
+              <div class="payment-amounts__row">
+                <span class="payment-amounts__text">Курсов на сумму:</span>
+                <div class="payment-amounts__price js-pay-courses">10 000</div>
               </div>
-            </div>
-            <div class="shopbag__amount">
-              <span class="shopbag__price-value">50 000</span>
-            </div>
-            <div class="shopbag__del">
-              <button class="btn-del"></button>
+              <div class="payment-amounts__row hide">
+                <span class="payment-amounts__text">Месяцев на сумму:</span>
+                <div class="payment-amounts__price js-pay-months">0</div>
+              </div>
+              <div class="payment-amounts__code">
+                <label for="">Промо код:</label>
+                <input type="text">
+                <button type="submit" class="btn btn--code">Ок</button>
+              </div>
+              <div class="payment-amounts__row">
+                <span class="payment-amounts__text">Скидка:</span>
+                <div class="payment-amounts__price js-pay-disc">1 000</div>
+              </div>
+              <div class="payment-amounts__row">
+                <span class="payment-amounts__text">Итого к оплате:</span>
+                <div class="current-price js-pay-total">1 000</div>
+              </div>
+              <button type="submit" class="btn btn--yellow">Оформить заказ</button>
             </div>
           </div>
-        </div>
-        <div class="shopbag__bottom">
-          <div class="shopbag__amounts">
-            <b>Итого:</b>
-            <div class="shopbag__amounts-row">
-              <div class="shopbag__amounts-text">Курсов на сумму:</div>
-              <div class="shopbag__amounts-price"><span class="shopbag__price-value">15 000</span></div>
-            </div>
-            <div class="shopbag__amounts-row">
-              <div class="shopbag__amounts-text">Курсов на сумму:</div>
-              <div class="shopbag__amounts-price"><span class="current-price">15 000</span></div>
-            </div>
-            <a href="#" class="btn">Перейти к оплате</a>
-          </div>
-        </div>
+        </form>
       </section>
     </div>
-
   </main>
 
   <footer class="page-footer">
@@ -334,6 +321,6 @@
       </div>
     </div>
   </footer>
-  <script src="js/script.min.js"></script>
+  <script src="js/shopbag-payment-type/script.min.js"></script>
 </body>
 </html>
