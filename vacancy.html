@@ -203,7 +203,7 @@
       </div>
       <div class="container">
         <div class="vacancy__items">
-          <div class="vacancy-item">
+          <div class="vacancy-item" data-vacancy-id="1">
             <div class="vacancy-item__head js-messages-collapse">
               <h3 class="vacancy-item__title">Секретарь</h3>
               <div class="vacancy-item__btn">
@@ -241,7 +241,7 @@
               </div>
             </div>
           </div>
-          <div class="vacancy-item">
+          <div class="vacancy-item" data-vacancy-id="2">
             <div class="vacancy-item__head js-messages-collapse">
               <h3 class="vacancy-item__title">Методист</h3>
               <div class="vacancy-item__btn">
@@ -279,7 +279,7 @@
               </div>
             </div>
           </div>
-          <div class="vacancy-item open">
+          <div class="vacancy-item" data-vacancy-id="4">
             <div class="vacancy-item__head js-messages-collapse">
               <h3 class="vacancy-item__title">Интернет-маркетолог</h3>
               <div class="vacancy-item__btn">
@@ -317,7 +317,7 @@
               </div>
             </div>
           </div>
-          <div class="vacancy-item">
+          <div class="vacancy-item" data-vacancy-id="14">
             <div class="vacancy-item__head js-messages-collapse">
               <h3 class="vacancy-item__title">Технический директор</h3>
               <div class="vacancy-item__btn">
@@ -431,30 +431,30 @@
       </div>
     </div>
   </footer>
-    <!-- Модальное окно "Загрузка резюме" -->
-  <div class="modal modal-alert">
+  <!-- Модальное окно "Загрузка резюме" -->
+  <div class="modal modal-alert modal-vacancy-form">
     <div class="modal-content modal-content--vacancy">
       <button class="js-modal-close btn-modal-close" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="9" height="9" viewBox="0 0 20 20"><path fill="#000" d="M20 1.543L18.457 0l-8.456 8.457L1.542 0 0 1.543l8.456 8.456L0 18.455 1.542 20l8.459-8.459L18.457 20 20 18.455l-8.457-8.456z"/></svg></button>
       <!-- Контент модального окна -->
       <div class="send-vacancy">
         <p class="send-vacancy__title">Загрузка резюме</p>
         <div class="send-vacancy__form-wrap">
-          <form action="/echo" class="form">
+          <form action="/vacancy.html" class="form" method="post" enctype="multipart/form-data">
             <div class="send-vacancy__form-row">
               <div class="send-vacancy__form-col">
-                <input type="text" placeholder="Имя" class="js-first-name-validate">
-                <input type="tel" placeholder="Телефон" class="">
+                <input type="text" placeholder="Имя" name="name" class="js-first-name-validate">
+                <input type="tel" placeholder="Телефон" name="phone" class="js-input-tel">
               </div>
               <div class="send-vacancy__form-col">
-                <input type="email" placeholder="Email*" class="js-email-validate">
+                <input type="email" placeholder="Email*" name="email" class="js-email-validate">
                 <div class="send-vacancy__file-wrap">
-                  <input type="file" >
+                  <input type="file" name="file" >
                   <div class="send-vacancy__file">
-                    <div class="send-vacancy__btn-file" style="display: none;">
+                    <div class="send-vacancy__btn-file">
                       <span class="send-vacancy__file-action">Прикрепить файл</span>
                       <span class="send-vacancy__file-types">doc., pdf, или jpg</span>
                     </div>
-                    <span class="send-vacancy__file-name">Резюме Черников.docx</span>
+                    <span class="send-vacancy__file-name" style="display: none;"></span>
                   </div>
                 </div>
               </div>
@@ -464,9 +464,21 @@
             </div>
           </form>
         </div>
+		<span class="js-get-modal js-open-modal-form hide" data-target=".modal-vacancy-form"></span>
       </div>
     </div>
   </div>
-  <script src="js/script.min.js"></script>
+  <!-- Модальное окно "Отправлено" -->
+  <div class="modal modal-alert">
+    <div class="modal-content modal-content--success">
+      <button class="js-modal-close btn-modal-close" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="9" height="9" viewBox="0 0 20 20"><path fill="#000" d="M20 1.543L18.457 0l-8.456 8.457L1.542 0 0 1.543l8.456 8.456L0 18.455 1.542 20l8.459-8.459L18.457 20 20 18.455l-8.457-8.456z"/></svg></button>
+      <!-- Контент модального окна -->
+      <div class="send-success">
+        <p class="alert-text"><b>Ваше резюме отправлено. В случае заинтересованности, мы с вами обязательно свяжемся.</b></p>
+        <button class="btn btn--ok" type="button">Ок</button>
+      </div>
+    </div>
+  </div>
+  <script src="js/vacancy/script.min.js"></script>
 </body>
 </html>
