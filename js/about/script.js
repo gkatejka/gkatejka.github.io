@@ -434,6 +434,20 @@ a.css({position:n,top:l,width:k+"px",marginTop:(c?c:0)+"px"})}})}}})})(jQuery);
     });
   });
   
+	// кнопка вверх
+	$(window).scroll( function() {
+		if ($(this).scrollTop() > ($("footer.page-footer").offset().top - ($(window).height() * 1.01))){ // коэф. 1.01 задан для удобства, можно убрать при необходимости
+			$('.btn-up').fadeIn();
+		} else {
+			$('.btn-up').fadeOut();
+		}
+	});
+    $('.btn-up').click(function(){
+		$('body, html').animate({
+			scrollTop: 0
+		}, 1000);
+    });
+  
 }());
 
 function renderBag(){

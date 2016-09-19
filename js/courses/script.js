@@ -189,7 +189,11 @@ d.slice(e-c+1,e+c+2).addClass("slick-active").attr("aria-hidden","false")),0===a
   });
   
   $('.courses-filter__col input').on('click', function(){
-    if ($(this).attr('id') == 'all-courses' && $(this).prop('checked')) $('.courses-filter__col input:checkbox:checked').not(this).prop('checked', false);
+    if ($(this).attr('id') == 'all-courses' && $(this).prop('checked')){
+		$('.courses-filter__col input:checkbox:checked').not(this).prop('checked', false);
+	} else {
+		$('#all-courses').prop('checked', false);
+	}
     loadPrograms();
   });
   
@@ -206,7 +210,10 @@ d.slice(e-c+1,e+c+2).addClass("slick-active").attr("aria-hidden","false")),0===a
         var count = Number($('.shop-btn__icon--bag .shop-btn__counter').text());
         $('.shop-btn__icon--bag .shop-btn__counter').text(++count);
         renderBag();
-      }
+      } else if (response.status == 'error' && response.error == 'access'){
+		  $('.modal-content--attention p.alert-text b').text(response.text);
+		  $('.modal-content--attention').show();
+	  }
     });
   }); 
   $('.programs__item-action').on('click', '.programs__btn-fav', function(){
@@ -220,6 +227,9 @@ d.slice(e-c+1,e+c+2).addClass("slick-active").attr("aria-hidden","false")),0===a
 			$('.shop-btn__icon--fav .shop-btn__counter').text(--count);
 			$(_this).removeClass('programs__btn-fav--active');
 			renderFav();
+		  } else if (response.status == 'error' && response.error == 'access'){
+			  $('.modal-content--attention p.alert-text b').text(response.text);
+			  $('.modal-content--attention').show();
 		  }
 		});
 		return;
@@ -231,8 +241,15 @@ d.slice(e-c+1,e+c+2).addClass("slick-active").attr("aria-hidden","false")),0===a
         $('.shop-btn__icon--fav .shop-btn__counter').text(++count);
         $(_this).addClass('programs__btn-fav--active');
         renderFav();
-      }
+      } else if (response.status == 'error' && response.error == 'access'){
+		  $('.modal-content--attention p.alert-text b').text(response.text);
+		  $('.modal-content--attention').show();
+	  }
     });
+  });
+  
+  $('.modal-content--attention .js-modal-close.btn-modal-close').on('click', function(){
+	  $('.modal-content--attention').hide();
   });
   
   function loadPrograms(){
@@ -410,6 +427,20 @@ d.slice(e-c+1,e+c+2).addClass("slick-active").attr("aria-hidden","false")),0===a
       }
     });
   });
+  
+	// кнопка вверх
+	$(window).scroll( function() {
+		if ($(this).scrollTop() > ($("footer.page-footer").offset().top - ($(window).height() * 1.01))){ // коэф. 1.01 задан для удобства, можно убрать при необходимости
+			$('.btn-up').fadeIn();
+		} else {
+			$('.btn-up').fadeOut();
+		}
+	});
+    $('.btn-up').click(function(){
+		$('body, html').animate({
+			scrollTop: 0
+		}, 1000);
+    });
   
 }());
 
