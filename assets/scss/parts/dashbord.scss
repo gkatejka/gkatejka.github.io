@@ -1,0 +1,8 @@
+.dashbord {
+  padding-left: 50px;
+  margin-bottom: 50px;
+
+  @media (max-width: $desktop) {
+    padding-left: 0;
+  }
+}

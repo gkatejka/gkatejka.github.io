@@ -1,0 +1,18 @@
+.status-item {
+
+  .status-num {
+    display: inline-block;
+    vertical-align: middle;
+    box-sizing: border-box;
+    padding-right: 15px;
+    font-weight: 500;
+  }
+
+  .status-text {
+    width: 50%;
+    display: inline-block;
+    vertical-align: middle;
+    box-sizing: border-box;
+    font-weight: 300;
+  }
+}

@@ -1,0 +1,72 @@
+.btn {
+  font-size: 14px;
+  font-weight: 300;
+  border-radius: 4px;
+}
+.btn-warning {
+  background: $orange;
+  border-color: $orange;
+
+  &:hover,
+  &:focus,
+  &:active:hover {
+    background: lighten($orange, 3%);
+    border-color: lighten($orange, 3%);
+  }
+
+  &:active {
+    background: darken($orange, 3%);
+    border-color: darken($orange, 3%);
+  }
+}
+
+.btn-clock {
+  padding-left: 35px;
+  position: relative;
+
+  &::before {
+    width: 15px;
+    height: 15px;
+    background: transparent url('../img/svg/clock.svg') 0 0 no-repeat;
+    background-size: 14px;
+    position: absolute;
+    left: 10px;
+    top: 8px;
+    content: '';
+  }
+}
+
+
+.btn-block {
+  box-sizing: border-box;
+  padding: 10px 13px 8px;
+  font-size: 14px;
+  margin-bottom: 20px;
+  color: rgba(0,0,0,.9);
+  font-weight: normal;
+  line-height: 18px;
+
+  .pull-right {
+    font-size: 12px;
+    line-height: 20px;
+    color: #AAAAAA;
+  }
+
+  &.btn-default {
+    background: #F6F8F9;
+    border-color: #F6F8F9;
+    border-radius: 4px;
+
+    &:hover {
+      background: $dark;
+      color: $white;
+    }
+
+  }
+
+  &.btn-info {
+    background: #F6F8F9;
+    border-color: $blue;
+    color: $blue;
+  }
+}

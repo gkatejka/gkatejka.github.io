@@ -1,0 +1,117 @@
+.book {
+  padding-top: 45px;
+  padding-left: 40px;
+
+  @media (max-width: $tablet) {
+    padding-left: 0;
+    padding-top: 20px;
+  }
+
+  .media {
+    margin-bottom: 50px;
+    
+    @media (max-width: $tablet) {
+      margin-bottom: 15px;
+    }
+
+    .h2 {
+      padding-bottom: 5px;
+
+      @media (max-width: $tablet) {
+        display: none;
+      }
+    }
+
+    .media-left {
+      padding-right: 20px;
+
+      @media (max-width: $tablet) {
+        display: none;
+      }
+    }
+
+    .book-about {
+      padding-bottom: 5px;
+
+      @media (max-width: $tablet) {
+        display: none;
+      }
+    }
+
+    .book-author {
+      padding-right: 20px;
+    }
+  }
+  
+
+  .book-nav {
+    margin-bottom: 35px;
+  }
+
+  .book-progress {
+    margin-bottom: 35px;
+
+    .progress {
+      max-width: 100%;
+      margin-top: 25px;
+      margin-bottom: 0;
+      background-color: $dark;
+      overflow: visible;
+    }
+
+    .progress-bar {
+      position: relative;
+    }
+
+    .progress-bar-success {
+
+      &::before {
+        width: 14px;
+        height: 20px;
+        background:transparent url('../img/svg/run-man.svg') 0 0 no-repeat;
+        background-size: 14px 20px;
+        position: absolute;
+        top: -23px;
+        right: -4px;
+        content: '';
+      }
+    }
+
+    .progress-bar-info {
+      
+      &::before {
+        width: 10px;
+        height: 14px;
+        background:transparent url('../img/svg/flag.svg') 0 0 no-repeat;
+        background-size: 10px 14px;
+        position: absolute;
+        top: -18px;
+        right: -9px;
+        content: '';
+      }
+    }
+
+  }
+
+
+  .status-item {
+    color: $dark-medium;
+
+    .status-num {
+      font-size: 37px;
+      line-height: 1;
+      font-weight: bold;
+    }
+
+    .status-text {
+      font-size: 14px;
+
+    }
+  }
+
+  .book-chapters {
+    .input-group {
+      margin-bottom: 25px;
+    }
+  }
+}

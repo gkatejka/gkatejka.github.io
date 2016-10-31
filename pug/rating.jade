@@ -1,0 +1,14 @@
+include ./templates/mixins.jade
+doctype html
+html
+  include ./templates/head.jade 
+  body
+    include ./templates/header.jade  
+    main
+    
+      .container
+        .row
+          .col-sm-8
+            include ./templates/rating.jade
+          .col-sm-4
+            +posts('Как написать эссе','Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime cum soluta hic ducimus, veniam debitis eius doloremque labore. Veritatis, dolores!')

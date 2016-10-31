@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=1200">
+    <title>Тотальная читка</title>
+    <script src="https://code.jquery.com/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&amp;amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/custom.css" rel="stylesheet" type="text/css">
+    <script src="assets/css/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/6df67120f9.js"></script>
+  </head>
+  <body>
+    <header class="header header-admin">
+      <nav class="navbar navbar-inverse header-top">
+        <div class="container">
+          <div class="navbar-header">
+            <button data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar" class="navbar-toggle collapsed"><span class="sr-only">Меню</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="#" class="header__logo-link pull-left">ТЧК</a>
+            <div class="statistic">
+              <p>1460 активных участников</p>
+              <p>На провереке<span class="badge">356</span></p>
+            </div>
+            <ul id="navbar" class="nav navbar-nav pull-right">
+              <li><a href="#">Книги</a></li>
+              <li><a href="#">Задания</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Рейтинг</a></li>
+              <li class="dropdown"><a href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle">Глеб Кушедов <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Редактировать</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="#">Выйти</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+            <div class="edit-panel">
+              <div class="container clearfix">
+                <p class="pull-left">Редактируем задание</p>
+                <button class="btn btn-default pull-right">Добавить задание</button>
+              </div>
+            </div>
+            <hr>
+      <div class="task-edit">
+        <div class="container">
+          <form class="form-horizontal">
+            <div class="row">
+              <div class="col-xs-6">
+                <h1>Жизнь на полной мощности</h1>
+                <div class="form-group row">
+                  <label for="book-name" class="col-xs-2 col-form-label">Книга</label>
+                  <div class="col-xs-8">
+                    <select id="book-name" class="form-control">
+                      <option>Жизнь на полной мощности</option>
+                      <option>Будь лучшей версией себя</option>
+                      <option>Триггеры. Развивай полезные привычки</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="task-type" class="col-xs-2 col-form-label">Тип</label>
+                  <div class="col-xs-3">
+                    <select id="task-type" class="form-control">
+                      <option>Конспект</option>
+                      <option>Эссе</option>
+                    </select>
+                  </div>
+                  <label for="task-step" class="col-xs-1 col-xs-offset-1 col-form-label">Этап</label>
+                  <div class="col-xs-2">
+                    <input id="task-step" type="text" placeholder="1" class="form-control">
+                  </div>
+                  <label for="task-step" class="col-xs-1 col-form-label">Этап</label>
+                  <div class="col-xs-2">
+                    <input id="task-step" type="text" placeholder="1" class="form-control">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="task-points" class="col-xs-2 col-form-label">Баллы</label>
+                  <div class="col-xs-2">
+                    <input id="task-points" type="text" placeholder="100" class="form-control">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="task-text" class="col-xs-12 col-form-label">Задание</label>
+                  <div class="col-xs-12">
+                    <textarea id="task-text" placeholder="Привет. Это твое первое задание. Начинай с первой главы и сразу пиши конспект" class="form-control"></textarea>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <div class="col-xs-4">
+                    <button type="submit" class="btn btn-info">Сохранить</button>
+                  </div>
+                  <div class="col-xs-7">
+                    <p>Применится ко всем пользователям сразу. осторожно!</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-6">
+                <div class="form-group row">
+                  <p>Проверочные тезисы конспекта (каждый на отдельной строке)</p>
+                  <div class="col-xs-12">
+                    <textarea placeholder="Ключевая идея занимает примерно три строки мелким шрифтом." class="form-control"></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

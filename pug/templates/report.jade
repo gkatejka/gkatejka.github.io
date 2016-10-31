@@ -1,0 +1,24 @@
+a(href='#').back-link Вернуться к книге
+
+h1
+  | Написать эссе: как моя компания может изменить к лучшему мой город?
+
+#accordion.panel-group
+  .panel.panel-default
+    .panel-heading
+      .panel-title
+        a(data-toggle='collapse', data-parent='#accordion', href='#collapse1').clearfix
+         span.pull-left Эссе отклонено
+         span.pull-right 0/100
+    #collapse1.panel-collapse.collapse.in
+      .panel-body
+        p
+          | В эссе нужно анализировать, а не пересказывать. Тема была заявлена: тренировки для победы. Где тезисы, где примеры, где цитаты в конце концов?
+
+.edit-form
+  form(action='/echo')
+    .input-groug
+      textarea#editarea
+    .input-groug
+      button.btn.btn-primary.btn-sm(type='submit') Сохранить
+      button.btn.btn-info.btn-sm(type='submit') Отправить на проверку

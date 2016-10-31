@@ -1,0 +1,15 @@
+include ./templates/mixins.jade
+doctype html
+html
+  include ./templates/head.jade
+  body
+    include ./templates/header.jade
+    main.gradient-sidebar.book-page
+    
+      .container
+        .row
+          aside.col-md-4
+            include ./templates/sidebar.jade
+
+          .col-md-8
+            include ./templates/book.jade

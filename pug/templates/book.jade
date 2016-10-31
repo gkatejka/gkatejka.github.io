@@ -1,0 +1,109 @@
+.book
+  .media
+    .media-left
+      img.pull-left(src='assets/img/book-1.png', width='77', height='109', alt='')
+    .media-body
+      h2.h2 Будь лучшей версией себя
+      p.book-about
+        span.book-author Дэн Вальдшмидтт
+        span.muted 300 страниц, 9 глав
+      .clearfix 
+        p.pull-left.muted Прочитать 0 – 50%
+        p.pull-right.muted.hidden Резервный блок
+
+  .book-nav
+    .row
+      .col-sm-6
+        a.btn.btn-default.btn-block.clearfix
+          span.pull-left Редактировать конспект
+          span.pull-right 100-200
+      .col-sm-6
+        a.btn.btn-info.btn-block.clearfix
+          span.pull-left Эссе на проверке
+          span.pull-right +10 - 100
+      .col-sm-6   
+        a.btn.btn-default.btn-block.clearfix
+          span.pull-left Пройти тест
+          span.pull-right +10 - 100
+      .col-sm-6
+        a.btn.btn-default.btn-block.clearfix
+          span.pull-left Расшарить конспект
+          span.pull-right +10 - 100
+      .col-sm-6
+        a.btn.btn-default.btn-block.clearfix
+          span.pull-left Опубликовать видео
+          span.pull-right +10 - 100
+
+
+  .row.book-progress
+    .col-sm-4
+      .status-item
+        span.status-num 35% 
+        span.status-text книги прочитано
+    .col-sm-8
+      .progress
+        .progress-bar.progress-bar-success(style="width:35%")
+          span.sr-only
+        .progress-bar.progress-bar-info(style="width:10%")
+          span.sr-only
+
+  .book-chapters
+    form(action='/echo')
+      .row
+        .col-sm-4.col-xs-12
+          .input-group
+            input#chapter1(type='checkbox', checked)
+            label(for='chapter1') Глава 1
+          .input-group
+            input#chapter2(type='checkbox')
+            label(for='chapter2') Глава 2
+          .input-group
+            input#chapter3(type='checkbox')
+            label(for='chapter3') Глава 3
+          .input-group
+            input#chapter4(type='checkbox')
+            label(for='chapter4') Глава 4
+          .input-group
+            input#chapter5(type='checkbox')
+            label(for='chapter5') Глава 5
+          .input-group
+            input#chapter6(type='checkbox')
+            label(for='chapter6') Глава 6
+          .input-group
+            input#chapter7(type='checkbox')
+            label(for='chapter7') Глава 7
+        .col-sm-4.col-xs-12
+          .input-group
+            input#chapter8(type='checkbox')
+            label(for='chapter8') Глава 8
+          .input-group
+            input#chapter9(type='checkbox')
+            label(for='chapter9') Глава 9
+          .input-group
+            input#chapter10(type='checkbox')
+            label(for='chapter10')  Глава 10
+          .input-group
+            input#chapter11(type='checkbox')
+            label(for='chapter11')  Глава 11
+          .input-group
+            input#chapter12(type='checkbox')
+            label(for='chapter12') Глава 12
+          .input-group
+            input#chapter13(type='checkbox')
+            label(for='chapter13')  Глава 13
+          .input-group
+            input#chapter14(type='checkbox')
+            label(for='chapter14')  Глава 14
+        .col-sm-4.col-xs-12
+          .input-group
+            input#chapter15(type='checkbox')
+            label(for='chapter15') Глава 15
+          .input-group
+            input#chapter16(type='checkbox')
+            label(for='chapter16') Глава 16
+          .input-group
+            input#chapter17(type='checkbox')
+            label(for='chapter17')  Глава 17
+          .input-group
+            input#chapter18(type='checkbox')
+            label(for='chapter18')  Глава 18
