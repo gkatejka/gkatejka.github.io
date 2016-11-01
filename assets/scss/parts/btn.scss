@@ -2,7 +2,20 @@
   font-size: 14px;
   font-weight: 300;
   border-radius: 4px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
+
+.btn-primary {
+  background: $dark;
+  border-color: $dark;
+}
+
+.btn-info {
+  background: $blue;
+  border-color: $blue;
+}
+
 .btn-warning {
   background: $orange;
   border-color: $orange;

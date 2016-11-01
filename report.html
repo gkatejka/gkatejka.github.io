@@ -4,19 +4,24 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>Тотальная читка</title>
-    <script src="https://code.jquery.com/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&amp;amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="assets/css/custom.css" rel="stylesheet" type="text/css">
-    <script src="assets/css/bootstrap.min.js"></script>
-    <script src="https://use.fontawesome.com/6df67120f9.js"></script>
+    <script src="https://code.jquery.com/jquery.min.js" , async></script>
+    <script src="assets/css/bootstrap.min.js" async></script>
+    <script src="https://use.fontawesome.com/6df67120f9.js" async></script>
+    <script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
+    <script>
+      tinymce.init({ selector:'textarea', height : 300, content_css: [
+      'assets/css/bootstrap.min.css', '/assets/css/custom.css']});
+    </script>
   </head>
   <body>
     <header class="header">
       <nav class="navbar navbar-inverse header-top">
         <div class="container">
           <div class="navbar-header clearfix">
-            <button data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar" class="navbar-toggle collapsed"><span class="sr-only">Меню</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="#" class="header-logo-link pull-left">ТЧК</a>
+            <button data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar" class="navbar-toggle collapsed"><span class="sr-only">Меню</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="/" class="header-logo-link pull-left">ТЧК</a>
             <ul id="navbar" class="nav navbar-nav pull-left">
               <li><a href="#">Задания</a></li>
               <li><a href="#">FAQ</a></li>
@@ -55,48 +60,52 @@
         </div>
       </div>
     </header>
-    <main>
-      <div class="container">
+    <main class="report-page">
+      <div class="container"><a href="/book.html" class="back-link">Вернуться к книге</a>
         <div class="row">
-          <div class="col-sm-8"><a href="#" class="back-link">Вернуться к книге</a>
-            <h1>Написать эссе: как моя компания может изменить к лучшему мой город?</h1>
-            <div id="accordion" class="panel-group">
-              <div class="panel panel-default">
-                <div class="panel-heading">
-                  <div class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse1" class="clearfix"><span class="pull-left">Эссе отклонено</span><span class="pull-right">0/100</span></a></div>
-                </div>
-                <div id="collapse1" class="panel-collapse collapse in">
-                  <div class="panel-body">
-                    <p>В эссе нужно анализировать, а не пересказывать. Тема была заявлена: тренировки для победы. Где тезисы, где примеры, где цитаты в конце концов?</p>
+          <div class="col-sm-8">
+            <div class="report">
+              <form action="/echo">
+                <h1 class="h2">Написать эссе: как моя компания может изменить к лучшему мой город?</h1>
+                <div id="accordion" class="panel-group">
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <div class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse1" class="clearfix"><span class="panel-title-text pull-left">Эссе отклонено</span><span class="panel-title-num pull-right">0/100 баллов</span></a></div>
+                    </div>
+                    <div id="collapse1" class="panel-collapse collapse in">
+                      <div class="panel-body">
+                        <p>В&nbsp;эссе нужно анализировать, а&nbsp;не&nbsp;пересказывать. Тема была заявлена: тренировки для&nbsp;победы. Где тезисы, где примеры, где цитаты в&nbsp;конце концов?</p>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
-            <div class="edit-form">
-              <form action="/echo">
-                <div class="input-groug">
-                  <textarea id="editarea"></textarea>
-                </div>
-                <div class="input-groug">
-                  <button type="submit" class="btn btn-primary btn-sm">Сохранить</button>
-                  <button type="submit" class="btn btn-info btn-sm">Отправить на проверку</button>
+                <div class="edit-form">
+                  <div class="input-groug">
+                    <textarea id="editarea" placeholder="When it comes to cooking there are few tools that are more versatile in the kitchen than the microwave. This device offers so many functions when it comes to cooking that most people never bother to utilize. It’s sad really. In most homes, the microwave has been relegated to doing duty as a meat defroster, popcorn popper, and coffee warmer rather than using is as the fabulous device for actual food preparation that it really is capable of being. Before you set up to change your ways, you need to understand that when it comes to microwave cooking, not all microwaves were created equal. Wattage is vitally important as is the quality of your microwave. "></textarea>
+                  </div>
+                  <div class="input-groug">
+                    <button type="submit" class="btn btn-primary">Сохранить</button>
+                    <button type="submit" class="btn btn-info">Отправить на проверку</button>
+                  </div>
                 </div>
               </form>
             </div>
           </div>
-          <div class="col-sm-4">
-            <article>
-              <h2>Как написать эссе</h2>
-              <div class="posts-text">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime cum soluta hic ducimus, veniam debitis eius doloremque labore. Veritatis, dolores!</p>
-              </div>
-            </article>
-            <article>
-              <h2>Как мы оцениваем эссе</h2>
-              <div class="posts-text">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime cum soluta hic ducimus, veniam debitis eius doloremque labore. Veritatis, dolores! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime cum soluta hic ducimus, veniam debitis eius doloremque labore. Veritatis, dolores!</p>
-              </div>
-            </article>
+          <div class="col-sm-4 hidden-xs">
+            <aside class="posts">
+              <article>
+                <h2>Как написать эссе</h2>
+                <div class="posts-text">
+                  <p>Олицетворение начинает эпизодический полифонический роман. Лирический субъект непосредственно иллюстрирует экзистенциальный голос персонажа. Мифопорождающее текстовое устройство взаимно. Быличка, если уловить хореический ритм или аллитерацию на &quot;р&quot;, многопланово представляет собой гекзаметр.</p>
+                </div>
+              </article>
+              <article>
+                <h2>Как мы оцениваем эссе</h2>
+                <div class="posts-text">
+                  <p>Лирика откровенна. Нельзя восстановить истинной хронологической последовательности событий, потому что звукопись редуцирует деструктивный размер. Лексика представляет собой поэтический палимпсест. Зачин неизменяем. Прустрация существенно отражает прозаический композиционный анализ, заметим, каждое стихотворение объединено вокруг основного философского стержня.</p>
+                </div>
+              </article>
+            </aside>
           </div>
         </div>
       </div>

@@ -11,41 +11,42 @@
         p.pull-left.muted Прочитать 0 – 50%
         p.pull-right.muted.hidden Резервный блок
 
-  .book-nav
-    .row
-      .col-sm-6
-        a.btn.btn-default.btn-block.clearfix
-          span.pull-left Редактировать конспект
-          span.pull-right 100-200
-      .col-sm-6
-        a.btn.btn-info.btn-block.clearfix
-          span.pull-left Эссе на проверке
-          span.pull-right +10 - 100
-      .col-sm-6   
-        a.btn.btn-default.btn-block.clearfix
-          span.pull-left Пройти тест
-          span.pull-right +10 - 100
-      .col-sm-6
-        a.btn.btn-default.btn-block.clearfix
-          span.pull-left Расшарить конспект
-          span.pull-right +10 - 100
-      .col-sm-6
-        a.btn.btn-default.btn-block.clearfix
-          span.pull-left Опубликовать видео
-          span.pull-right +10 - 100
+  .book-nav-wrap#booknav
+    .book-nav
+      .row
+        .col-sm-6
+          a.btn.btn-default.btn-block.clearfix(href='/report.html')
+            span.pull-left Редактировать конспект
+            span.pull-right 100-200
+        .col-sm-6
+          a.btn.btn-info.btn-block.clearfix(href='#')
+            span.pull-left Эссе на проверке
+            span.pull-right +10 - 100
+        .col-sm-6   
+          a.btn.btn-default.btn-block.clearfix(href='#')
+            span.pull-left Пройти тест
+            span.pull-right +10 - 100
+        .col-sm-6
+          a.btn.btn-default.btn-block.clearfix(href='#')
+            span.pull-left Расшарить конспект
+            span.pull-right +10 - 100
+        .col-sm-6
+          a.btn.btn-default.btn-block.clearfix(href='#')
+            span.pull-left Опубликовать видео
+            span.pull-right +10 - 100
 
-
-  .row.book-progress
-    .col-sm-4
-      .status-item
-        span.status-num 35% 
-        span.status-text книги прочитано
-    .col-sm-8
-      .progress
-        .progress-bar.progress-bar-success(style="width:35%")
-          span.sr-only
-        .progress-bar.progress-bar-info(style="width:10%")
-          span.sr-only
+  #bookprogress
+    .row.book-progress
+      .col-sm-4
+        .status-item
+          span.status-num 35% 
+          span.status-text книги прочитано
+      .col-sm-8
+        .progress
+          .progress-bar.progress-bar-success(style="width:35%")
+            span.sr-only
+          .progress-bar.progress-bar-info(style="width:10%")
+            span.sr-only
 
   .book-chapters
     form(action='/echo')

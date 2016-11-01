@@ -1,10 +1,14 @@
 head
   meta(charset='utf-8')
-  meta(name='viewport', content='width=1200')
+  meta(name='viewport', content='width=device-width')
   title Тотальная читка
   link(href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&amp;subset=cyrillic,cyrillic-ext", rel="stylesheet")
   link(href='assets/css/bootstrap.min.css', rel='stylesheet', type='text/css')
   link(href='assets/css/custom.css', rel='stylesheet', type='text/css')
-  script(src='https://code.jquery.com/jquery.min.js', async)
+  script(src='https://code.jquery.com/jquery.min.js', , async)
   script(src='assets/css/bootstrap.min.js', async)
   script(src='https://use.fontawesome.com/6df67120f9.js', async)
+  script(src='//cdn.tinymce.com/4/tinymce.min.js')
+  script
+    | tinymce.init({ selector:'textarea', height : 300, content_css: [
+    'assets/css/bootstrap.min.css', '/assets/css/custom.css']});

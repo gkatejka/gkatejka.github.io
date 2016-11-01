@@ -2,8 +2,22 @@
   h2.h3 Задания недели 2
   p.sub-text 16 сентября – 23 сентября
   .btn.btn-warning.btn-clock До дедлайна 2 дня и 1 час
+  ul.sidebar-list
+    li.dropdown
+      a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false').clearfix
+        span.pull-left
+          img(src="assets/img/book-thumb-1.png", alt="")
+          | Будь лучшей версией себя
+        span.pull-right.caret
+      ul.dropdown-menu
+        li
+          a(href='/book.html') 7 навыков высокоэффективных людей
+        li
+          a(href='/book.html') Триггеры. Формируй привычки – закаляй характер
+
 
   .media-links-list
+
     a(href='/book.html').media-link
       .media
         .media-left
@@ -14,7 +28,8 @@
           .progress
             .progress-bar.progress-bar-success(role='progressbar', aria-valuenow='0', aria-valuemin='0', aria-valuemax='100', style="width:35%")
           small Прочитать 50 – 100%. Выполняется
-    a(href='/book.html').media-link
+
+    a(href='/book.html').media-link.media-link-active
       .media
         .media-left
           img.pull-left(src='assets/img/book-thumb-2.png', width='48', height='69', alt='')
@@ -24,6 +39,7 @@
           .progress
             .progress-bar.progress-bar-success(role='progressbar', aria-valuenow='0', aria-valuemin='0', aria-valuemax='100', style="width:35%")
           small Прочитать 50 – 100%. Выполняется
+          
     a(href='/book.html').media-link
       .media
         .media-left

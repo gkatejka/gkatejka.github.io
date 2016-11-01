@@ -1,5 +1,9 @@
 @import "variables";
+@import "mixins";
 
+#tinymce {
+  padding: 15px 10px;
+}
 
 .muted {
   color: #4A4A4A;
@@ -102,5 +106,7 @@ label {
 @import "parts/sidebar";
 @import "parts/dashbord";
 @import "parts/book";
+@import "parts/report";
 
 @import "parts/book-page";
+@import "parts/report-page";

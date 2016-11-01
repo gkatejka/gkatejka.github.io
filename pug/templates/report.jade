@@ -1,24 +1,23 @@
-a(href='#').back-link Вернуться к книге
-
-h1
-  | Написать эссе: как моя компания может изменить к лучшему мой город?
-
-#accordion.panel-group
-  .panel.panel-default
-    .panel-heading
-      .panel-title
-        a(data-toggle='collapse', data-parent='#accordion', href='#collapse1').clearfix
-         span.pull-left Эссе отклонено
-         span.pull-right 0/100
-    #collapse1.panel-collapse.collapse.in
-      .panel-body
-        p
-          | В эссе нужно анализировать, а не пересказывать. Тема была заявлена: тренировки для победы. Где тезисы, где примеры, где цитаты в конце концов?
-
-.edit-form
+.report
   form(action='/echo')
-    .input-groug
-      textarea#editarea
-    .input-groug
-      button.btn.btn-primary.btn-sm(type='submit') Сохранить
-      button.btn.btn-info.btn-sm(type='submit') Отправить на проверку
+    h1.h2
+      | Написать эссе: как моя компания может изменить к лучшему мой город?
+
+    #accordion.panel-group
+      .panel.panel-default
+        .panel-heading
+          .panel-title
+            a(data-toggle='collapse', data-parent='#accordion', href='#collapse1').clearfix
+             span.panel-title-text.pull-left Эссе отклонено
+             span.panel-title-num.pull-right 0/100 баллов
+        #collapse1.panel-collapse.collapse.in
+          .panel-body
+            p
+              | В&nbsp;эссе нужно анализировать, а&nbsp;не&nbsp;пересказывать. Тема была заявлена: тренировки для&nbsp;победы. Где тезисы, где примеры, где цитаты в&nbsp;конце концов?
+
+    .edit-form
+      .input-groug
+        textarea#editarea(placeholder='When it comes to cooking there are few tools that are more versatile in the kitchen than the microwave. This device offers so many functions when it comes to cooking that most people never bother to utilize. It’s sad really. In most homes, the microwave has been relegated to doing duty as a meat defroster, popcorn popper, and coffee warmer rather than using is as the fabulous device for actual food preparation that it really is capable of being. Before you set up to change your ways, you need to understand that when it comes to microwave cooking, not all microwaves were created equal. Wattage is vitally important as is the quality of your microwave. ')
+      .input-groug
+        button.btn.btn-primary(type='submit') Сохранить
+        button.btn.btn-info(type='submit') Отправить на проверку

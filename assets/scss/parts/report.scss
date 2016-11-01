@@ -1,0 +1,71 @@
+.report {
+
+  .h2 {
+    padding-bottom: 25px;
+  }
+
+  // аккордеон
+  .panel-group {
+
+    .panel-default {
+      border-color: transparent;
+      border-radius: 0 0 4px 4px;
+      overflow: hidden;
+      box-shadow: none;
+    }
+    
+    // шапка
+    .panel-heading {
+      background: $orange;
+      color: $white;
+      padding: 13px;
+      line-height: 16px;
+      border-radius: 4px 4px 0 0;
+    }
+
+    .panel-title-num {
+      padding-right: 25px;
+      font-weight: 300;
+      font-size: 13px;
+      position: relative;
+
+      &::after {
+        width: 8px;
+        height: 8px;
+        border-left: 2px solid $white;
+        border-bottom: 2px solid $white;
+        transform: rotate(-45deg);
+        position: absolute;
+        top: 2px;
+        right: 0;
+        content: '';
+      }
+    }
+
+    .panel-body {
+      background: rgba(233,233,233,.4);
+      padding: 15px;
+
+      p {
+        padding-bottom: 10px;
+        line-height: 1.5;
+
+        &:last-of-type {
+          padding-bottom: 0;
+        }
+      }
+    }
+  }
+  
+  .edit-form {
+
+    .input-groug {
+      padding-top: 20px;
+
+      .btn-primary {
+        margin-right: 10px;
+      }
+    }
+  }
+
+}
