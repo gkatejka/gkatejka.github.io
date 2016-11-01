@@ -552,8 +552,8 @@ p {
 .report .panel-group .panel-default {
   border-color: transparent;
   border-radius: 0 0 4px 4px;
-  overflow: hidden;
-  box-shadow: none; }
+  box-shadow: none;
+  overflow: hidden; }
 .report .panel-group .panel-heading {
   background: #FB612C;
   color: #ffffff;
