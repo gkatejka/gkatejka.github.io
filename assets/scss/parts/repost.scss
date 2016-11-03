@@ -1,0 +1,120 @@
+.repost {
+
+  .input-group {
+
+    @media (max-width: $tablet) {
+      width: 100%;
+    }
+
+    label {
+      display: block;
+      margin: 10px 0;
+    }
+
+    input[type="text"] {
+      height: 40px;
+      
+      @media (max-width: $tablet) {
+        display: block;
+        border-radius: 4px;
+      }
+    }
+
+    .input-group-btn {
+      @media (max-width: $tablet) {
+        margin-top: 10px;
+        float: left;
+        width: 100%;
+        white-space: normal;
+
+        .btn {
+          border-radius: 4px;
+        }
+      }
+    }
+  }
+
+  .well {
+    margin-top: 40px;
+    padding: 25px;
+    background: $white;
+    border-color: #D8D8D8;
+    box-shadow: none;
+
+    @media (max-width: $tablet) {
+      padding: 0;
+      border: none;
+    }
+  }
+
+  .well-title {
+    font-size: 18px;
+    font-weight: 500;
+    color: #2E2D2D;
+  }
+
+  .repost-book {
+    max-width: 70%;
+    margin-top: 0;
+    margin-bottom: 30px;
+    padding: 30px;
+    box-sizing: border-box;
+    background: #FBFCFD;
+    border: 1px solid #C6C6C6;
+
+    @media (max-width: $desktop-full) {
+      max-width: 85%;
+    }
+
+    @media (max-width: $tablet) {
+      max-width: 100%;
+      padding-bottom: 15px;
+      margin-bottom: 20px;
+    }
+
+    .media-left {
+      padding-right: 25px;
+    }
+
+    .media-left,
+    .media-body {
+      @media (max-width: $tablet) {
+        display: block;
+      }
+    }
+    
+
+    .repost-book-name {
+      font-size: 16px;
+      font-weight: bold;
+      padding: 15px 0;
+    }
+
+    .repost-book-title {
+      margin: 0;
+      padding: 0 0 5px;
+      font-size: 29px;
+      font-weight: 900;
+    }
+
+    .repost-book-tag {
+      color: #4A4A4A;
+      font-size: 16px;
+      line-height: 1.3;
+
+      a {
+        color: #4A4A4A;
+      }
+    }
+  }
+
+  .btn-repost-fb {
+    margin-right: 20px;
+
+    @media (max-width: $tablet) {
+      margin-bottom: 15px;
+    }
+  }
+
+
+}

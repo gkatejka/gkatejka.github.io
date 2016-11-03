@@ -1,1 +1,29 @@
-h1 Рейтинг
+include ./mixins.jade
+.rating
+  h1.rating-title Рейтинг
+  table.rating-table-head
+    tr
+      td Место
+      td.rating-points-step Баллов за этап
+      td.rating-points-all За все
+  table.rating-table
+    +rating('1', 'Cергей Лукерин', 'Прочитано 984 стр', '9/12', '912')
+    +rating('2', 'Моисей Федотов', 'Прочитано 684 стр', '10/12', '808')
+    +rating('3', 'Денис Прокофьев', 'Прочитано 484 стр', '7/12', '744')
+    +rating('4', 'Сергей Лукерин', 'Прочитано 584 стр', '6/12', '544')
+    +rating('5', 'Моисей Федотов', 'Прочитано 484 стр', '5/12', '444')
+    +rating('6', 'Денис Прокофьев', 'Прочитано 404 стр', '5/12', '404')
+    tr
+      td.rating-person
+        a(href="#")
+          table
+            tr
+              td 7
+              td.rating-person-img
+                img(src='assets/img/kate.jpg', alt='')
+              td.rating-person-about
+                .rating-person-name Катерина Иванова
+                .rating-person-read Прочитано 284 стр
+              td.rating-points-step 3/12
+              td.rating-points-all 404
+  button.btn.btn-default.btn-more(type='button') Загрузить еще 100

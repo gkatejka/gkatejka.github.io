@@ -2,19 +2,50 @@
   font-size: 14px;
   font-weight: 300;
   border-radius: 4px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 9px 20px;
+  
+  &:active:hover,
+  &:focus {
+    outline: none;
+  }
 }
+
 
 .btn-primary {
   background: $dark;
   border-color: $dark;
+
+  &:hover,
+  &:focus,
+  &:active:hover {
+    background: lighten($dark, 3%);
+    border-color: lighten($dark, 3%);
+  }
+
+  &:active {
+    background: darken($dark, 3%);
+    border-color: darken($dark, 3%);
+  }
 }
+
 
 .btn-info {
   background: $blue;
   border-color: $blue;
+
+  &:hover,
+  &:focus,
+  &:active:hover {
+    background: lighten($blue, 3%);
+    border-color: lighten($blue, 3%);
+  }
+
+  &:active {
+    background: darken($blue, 3%);
+    border-color: darken($blue, 3%);
+  }
 }
+
 
 .btn-warning {
   background: $orange;
@@ -32,6 +63,7 @@
     border-color: darken($orange, 3%);
   }
 }
+
 
 .btn-clock {
   padding-left: 35px;
@@ -82,4 +114,58 @@
     border-color: $blue;
     color: $blue;
   }
+}
+
+
+.btn-repost-fb {
+  background: #3C56A1;
+  border-color: #3C56A1;
+  color: $white;
+  font-size: 15px;
+
+  &:hover,
+  &:focus,
+  &:active:hover {
+    background: lighten(#3C56A1, 10%);
+    border-color: lighten(#3C56A1, 10%);
+    color: $white;
+  }
+
+  &:active {
+    background: darken(#3C56A1, 10%);
+    border-color: darken(#3C56A1, 10%);
+    color: $white;
+  }
+
+}
+
+
+.btn-repost-vk {
+  background: #4372A6;
+  border-color: #4372A6;
+  color: $white;
+  font-size: 15px;
+
+  &:hover,
+  &:focus,
+  &:active:hover {
+    background: lighten(#4372A6, 8%);
+    border-color: lighten(#4372A6, 8%);
+    color: $white;
+  }
+
+  &:active {
+    background: darken(#4372A6, 10%);
+    border-color: darken(#4372A6, 10%);
+    color: $white;
+  }
+}
+
+
+.btn-more {
+  width: 100%;
+  padding: 8px 20px;
+  border-color: #D0D0D0;
+  color: #2E2D2D;
+  font-size: 13px;
 }

@@ -10,5 +10,4 @@ head
   script(src='https://use.fontawesome.com/6df67120f9.js', async)
   script(src='//cdn.tinymce.com/4/tinymce.min.js')
   script
-    | tinymce.init({ selector:'textarea', height : 300, content_css: [
-    'assets/css/bootstrap.min.css', '/assets/css/custom.css']});
+    | tinymce.init({ selector:'#editarea', height: 300, content_css: ['assets/css/bootstrap.min.css', '/assets/css/custom.css'], menubar:false, toolbar: 'styleselect | bold italic | bullist numlist', statusbar: false, plugins: "autosave" });

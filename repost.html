@@ -57,34 +57,32 @@
         </div>
       </div>
     </header>
-    <main class="report-page">
+    <main class="repost-page">
       <div class="container"><a href="/book.html" class="back-link">Вернуться к книге</a>
         <div class="row">
           <div class="col-md-8">
-            <div class="report">
+            <div class="repost">
               <form action="/echo">
-                <div class="report-item">
-                  <h1 class="h2">Написать эссе: как моя компания может изменить к лучшему мой город?</h1>
-                  <div id="accordion" class="panel-group">
-                    <div class="panel panel-default">
-                      <div class="panel-heading">
-                        <div class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse1" class="clearfix"><span class="panel-title-text pull-left">Эссе отклонено</span><span class="panel-title-num pull-right">0/100 баллов</span></a></div>
-                      </div>
-                      <div id="collapse1" class="panel-collapse collapse in">
-                        <div class="panel-body">
-                          <p>В&nbsp;эссе нужно анализировать, а&nbsp;не&nbsp;пересказывать. Тема была заявлена: тренировки для&nbsp;победы. Где тезисы, где примеры, где цитаты в&nbsp;конце концов?</p>
-                        </div>
-                      </div>
-                    </div>
+                <div class="repost-item">
+                  <h1 class="h2">Опубликуйте свой конспект в соцсетях</h1>
+                  <div class="input-group">
+                    <label for="repostlink1">Ссылка на пост</label>
                   </div>
-                  <div class="edit-form">
-                    <div class="input-groug">
-                      <textarea id="editarea"></textarea>
+                  <div class="input-group">
+                    <input type="text" id="repostlink1" class="form-control"><span class="input-group-btn">
+                      <button type="submit" class="btn btn-primary">Отправить на&nbsp;проверку</button></span>
+                  </div>
+                  <div class="well">
+                    <p class="well-title">Опубликуйте конспект в&nbsp;три&nbsp;клика</p>
+                    <div class="media repost-book">
+                      <div class="media-left"><img src="assets/img/book-1-big.png" width="113" height="160" alt="" class="pull-left"></div>
+                      <div class="media-body">
+                        <p class="repost-book-name"> Будь лучшей версией себя</p>
+                        <h2 class="repost-book-title">Мой конспект</h2>
+                        <p class="repost-book-tag">В книжном марафоне <br><a href="#">#тотальнаячитка</a></p>
+                      </div>
                     </div>
-                    <div class="input-groug">
-                      <button type="submit" class="btn btn-primary">Сохранить</button>
-                      <button type="submit" class="btn btn-info">Отправить на проверку</button>
-                    </div>
+                    <div class="repost-book-btns"><a href="#" class="btn btn-repost-fb">Опубликовать на Facebook</a><a href="#" class="btn btn-repost-vk">Опубликовать Вконтакте</a></div>
                   </div>
                 </div>
               </form>

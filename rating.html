@@ -56,19 +56,137 @@
         </div>
       </div>
     </header>
-    <main>
+    <main class="rating-page">
       <div class="container">
         <div class="row">
-          <div class="col-sm-8">
-            <h1>Рейтинг</h1>
+          <div class="col-md-8">
+            <div class="rating">
+              <h1 class="rating-title">Рейтинг</h1>
+              <table class="rating-table-head">
+                <tr>
+                  <td>Место</td>
+                  <td class="rating-points-step">Баллов за этап</td>
+                  <td class="rating-points-all">За все</td>
+                </tr>
+              </table>
+              <table class="rating-table">
+                            <tr>
+                              <td class="rating-person"><a href="#">
+                                  <table>
+                                    <tr>
+                                      <td>1</td>
+                                      <td class="rating-person-img"><img src="assets/img/person-1.jpg" alt=""></td>
+                                      <td class="rating-person-about">
+                                        <div class="rating-person-name">Cергей Лукерин</div>
+                                        <div class="rating-person-read">Прочитано 984 стр</div>
+                                      </td>
+                                      <td class="rating-points-step">9/12</td>
+                                      <td class="rating-points-all">912</td>
+                                    </tr>
+                                  </table></a></td>
+                            </tr>
+                            <tr>
+                              <td class="rating-person"><a href="#">
+                                  <table>
+                                    <tr>
+                                      <td>2</td>
+                                      <td class="rating-person-img"><img src="assets/img/person-2.jpg" alt=""></td>
+                                      <td class="rating-person-about">
+                                        <div class="rating-person-name">Моисей Федотов</div>
+                                        <div class="rating-person-read">Прочитано 684 стр</div>
+                                      </td>
+                                      <td class="rating-points-step">10/12</td>
+                                      <td class="rating-points-all">808</td>
+                                    </tr>
+                                  </table></a></td>
+                            </tr>
+                            <tr>
+                              <td class="rating-person"><a href="#">
+                                  <table>
+                                    <tr>
+                                      <td>3</td>
+                                      <td class="rating-person-img"><img src="assets/img/person-3.jpg" alt=""></td>
+                                      <td class="rating-person-about">
+                                        <div class="rating-person-name">Денис Прокофьев</div>
+                                        <div class="rating-person-read">Прочитано 484 стр</div>
+                                      </td>
+                                      <td class="rating-points-step">7/12</td>
+                                      <td class="rating-points-all">744</td>
+                                    </tr>
+                                  </table></a></td>
+                            </tr>
+                            <tr>
+                              <td class="rating-person"><a href="#">
+                                  <table>
+                                    <tr>
+                                      <td>4</td>
+                                      <td class="rating-person-img"><img src="assets/img/person-4.jpg" alt=""></td>
+                                      <td class="rating-person-about">
+                                        <div class="rating-person-name">Сергей Лукерин</div>
+                                        <div class="rating-person-read">Прочитано 584 стр</div>
+                                      </td>
+                                      <td class="rating-points-step">6/12</td>
+                                      <td class="rating-points-all">544</td>
+                                    </tr>
+                                  </table></a></td>
+                            </tr>
+                            <tr>
+                              <td class="rating-person"><a href="#">
+                                  <table>
+                                    <tr>
+                                      <td>5</td>
+                                      <td class="rating-person-img"><img src="assets/img/person-5.jpg" alt=""></td>
+                                      <td class="rating-person-about">
+                                        <div class="rating-person-name">Моисей Федотов</div>
+                                        <div class="rating-person-read">Прочитано 484 стр</div>
+                                      </td>
+                                      <td class="rating-points-step">5/12</td>
+                                      <td class="rating-points-all">444</td>
+                                    </tr>
+                                  </table></a></td>
+                            </tr>
+                            <tr>
+                              <td class="rating-person"><a href="#">
+                                  <table>
+                                    <tr>
+                                      <td>6</td>
+                                      <td class="rating-person-img"><img src="assets/img/person-6.jpg" alt=""></td>
+                                      <td class="rating-person-about">
+                                        <div class="rating-person-name">Денис Прокофьев</div>
+                                        <div class="rating-person-read">Прочитано 404 стр</div>
+                                      </td>
+                                      <td class="rating-points-step">5/12</td>
+                                      <td class="rating-points-all">404</td>
+                                    </tr>
+                                  </table></a></td>
+                            </tr>
+                <tr>
+                  <td class="rating-person"><a href="#">
+                      <table>
+                        <tr>
+                          <td>7</td>
+                          <td class="rating-person-img"><img src="assets/img/kate.jpg" alt=""></td>
+                          <td class="rating-person-about">
+                            <div class="rating-person-name">Катерина Иванова</div>
+                            <div class="rating-person-read">Прочитано 284 стр</div>
+                          </td>
+                          <td class="rating-points-step">3/12</td>
+                          <td class="rating-points-all">404</td>
+                        </tr>
+                      </table></a></td>
+                </tr>
+              </table>
+              <button type="button" class="btn btn-default btn-more">Загрузить еще 100</button>
+            </div>
           </div>
-          <div class="col-sm-4">
-            <article>
-              <h2>Как написать эссе</h2>
-              <div class="posts-text">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime cum soluta hic ducimus, veniam debitis eius doloremque labore. Veritatis, dolores!</p>
-              </div>
-            </article>
+          <div class="col-md-4 hidden-sm hidden-xs">
+                        <article>
+                          <h2 class="h2">Как подняться в рейтинге</h2>
+                          <p class="posts-sutitle">Несколько полезных советов</p>
+                          <div class="posts-text">
+                            <p>Мышление понимает архетип. Самонаблюдение, иcходя из того, что вызывает оппортунический субъект. Аномия, как справедливо считает Ф.Энгельс, неустойчиво отражает ассоцианизм. Импульс заметно дает контраст, независимо от психического состояния пациента. Чем больше люди узнают друг друга, тем больше лидерство самопроизвольно. Лидерство отталкивает методологический конформизм. Роджерс первым ввел в научный обиход понятие «клиент», так как предсознательное иллюстрирует эгоцентризм. Аномия, на первый взгляд, неумеренно дает оппортунический интеллект. Ассоциация критично отчуждает депрессивный тест. Сновидение отчуждает феноменологический эриксоновский гипноз. Генезис осознаёт материалистический код. Психосоматика, по определению, просветляет гендерный психоз. Психосоматика осознаёт эриксоновский гипноз, так, например, Ричард Бендлер для построения эффективных состояний использовал изменение субмодальностей. Архетип разрушаем.</p>
+                          </div>
+                        </article>
           </div>
         </div>
       </div>

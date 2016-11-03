@@ -12,14 +12,14 @@ mixin book
 
 mixin posts(postTitle, postText)
   article
-    h2=postTitle
+    h2.h2=postTitle
     .posts-text
       p=postText
 
 mixin posts-sutitle(postTitle, postSubtitle, postText)
   article
-    h2=postTitle
-    p=postSubtitle
+    h2.h2=postTitle
+    p.posts-sutitle=postSubtitle
     .posts-text
       p=postText
 
@@ -29,3 +29,18 @@ mixin editpanel(title, btnText)
       p.pull-left= title
       button.btn.btn-default.pull-right= btnText
   hr
+
+mixin rating(num, personName, personRead, ratingStep, ratingAll)
+  tr
+    td.rating-person
+      a(href="#")
+        table
+          tr
+            td=num
+            td.rating-person-img
+              img(src='assets/img/person-#{num}.jpg', alt='')
+            td.rating-person-about
+              .rating-person-name= personName
+              .rating-person-read= personRead
+            td.rating-points-step= ratingStep
+            td.rating-points-all= ratingAll

@@ -1,0 +1,16 @@
+.report.report-video
+  form(action='/echo')
+    .report-item
+      h1.h2
+        | Запишите видео по&nbsp;книге &laquo;Будь лучшей версией себя&raquo;
+      .report-text
+        p
+          | Инструкция к заданию. Pain may sometimes be the reason why people change. Getting bad grades make you realize that you need to study. Debts remind you of your inability to look for a source of income. Being humiliated gives you the ‘push’ to speak up and fight for yourself to save your face from the next embarrassment. It may be a bitter experience, a friend’s tragic story, a great movie, or an inspiring book that will help you to get up and get just the right amount of motivation you need in order to improve yourself
+      
+      .form-group.report-video-link
+        label(for="videolink1") Ссылка на видео (vk, youtube, vimeo)
+        input(type="text", id="videolink1").form-control
+
+      .form-group
+        button(type="submit").btn.btn-info Отправить на проверку
+  

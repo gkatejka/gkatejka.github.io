@@ -1,7 +1,16 @@
 .report {
+  padding-right: 45px;
+
+  @media (max-width: $tablet) {
+    padding-right: 0;
+  }
 
   .h2 {
     padding-bottom: 25px;
+  }
+
+  .report-item {
+    margin-bottom: 35px;
   }
 
   // аккордеон
@@ -11,6 +20,7 @@
       border-color: transparent;
       border-radius: 0 0 4px 4px;
       box-shadow: none;
+      overflow: hidden;
     }
     
     // шапка
@@ -56,14 +66,70 @@
     }
   }
   
+  // редактор
   .edit-form {
 
     .input-groug {
       padding-top: 20px;
 
+      .btn {
+        @media (max-width: $tablet) {
+          padding-left: 10px;
+          padding-right: 10px;
+        }
+      }
+
       .btn-primary {
         margin-right: 10px;
       }
+    }
+  }
+
+  &.report-sent textarea{
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 15px;
+    background: $white;
+    border: 1px solid rgba(163,163,163,.4);
+    border-radius: 0;
+    resize: vertical;
+    outline: none;
+  }
+
+  input[type="text"] {
+    margin-top: 10px;
+    border-color: rgba(198,198,198, .8);
+    border-radius: 4px;
+    box-shadow: none;
+    max-width: 100%;
+  }
+
+  .repost-link  {
+
+    input[type="text"] {
+      max-width: 70%;
+
+      @media (max-width: $tablet) {
+        max-width: 100%;
+      }
+    }
+  }
+
+  &.report-video {
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+  }
+
+  .report-video-link {
+    margin-top: 10px;
+
+    label {
+      color: #2E2D2D;
+      font-size: 18px;
+      font-weight: bold;
     }
   }
 
