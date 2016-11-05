@@ -1,49 +1,61 @@
 include ./mixins.jade
 
-+editpanel('Редактируем задание', 'Добавить задание')
-
 .task-edit
-  .container
+  .container-non-responsive
     form.form-horizontal
       .row
         .col-xs-6
-          h1 Жизнь на полной мощности
-          .form-group.row
-            label.col-xs-2.col-form-label(for='book-name') Книга
-            .col-xs-8
-              select#book-name.form-control
-                option Жизнь на полной мощности
-                option Будь лучшей версией себя
-                option Триггеры. Развивай полезные привычки
-          .form-group.row
-            label.col-xs-2.col-form-label(for='task-type') Тип
-            .col-xs-3
-              select#task-type.form-control
-                option Конспект
-                option Эссе
-            label.col-xs-1.col-xs-offset-1.col-form-label(for='task-step') Этап
-            .col-xs-2
-              input.form-control#task-step(type='text', placeholder='1')
-            label.col-xs-1.col-form-label(for='task-step') Этап
-            .col-xs-2
-              input.form-control#task-step(type='text', placeholder='1')
-          .form-group.row
-            label.col-xs-2.col-form-label(for='task-points') Баллы
-            .col-xs-2
-              input.form-control#task-points(type='text', placeholder='100')
-          .form-group.row
-            label.col-xs-12.col-form-label(for='task-text') Задание
-            .col-xs-12
-              textarea#task-text.form-control(placeholder='Привет. Это твое первое задание. Начинай с первой главы и сразу пиши конспект')
-          .form-group.row
-            .col-xs-4
-              button.btn.btn-info(type='submit') Сохранить
-            .col-xs-7
-              p Применится ко всем пользователям сразу. осторожно!
-        
+          .task-edit-left
+            h1.task-edit-title Жизнь на полной мощности
+            .form-group.row
+              label.col-xs-2.col-form-label(for='book-name') Книга
+              .col-xs-10
+                select#book-name.form-control
+                  option Жизнь на полной мощности
+                  option Будь лучшей версией себя
+                  option Триггеры. Развивай полезные привычки
+
+            .form-group.row
+              label.col-xs-2.col-form-label(for='task-type') Тип
+              .col-xs-3
+                select#task-type.form-control
+                  option Конспект
+                  option Эссе
+              .col-xs-7
+                .form-group-step
+                  label(for='task-step') Этап
+                  input.form-control#task-step(type='text', placeholder='1')
+                .form-group-week
+                  label(for='task-step') Неделя
+                  input.form-control#task-week(type='text', placeholder='2')
+
+            .form-group.row
+              .col-xs-2
+                label.col-form-label.label-with-text(for='task-points') Баллы
+                span.label-text максимум
+              .col-xs-2
+                input.form-control#task-points(type='text', placeholder='100')
+              .col-xs-8
+                .form-group-border
+                  .form-group-border-label
+                    label.col-form-label.label-with-text(for='task-border-start') Границы (%)
+                    span.label-text для конспектов
+                  input.form-control#task-border-start(type='text', placeholder='0')
+                  .input-arrow  &rarr;
+                  input.form-control#task-border-end(type='text', placeholder='50')
+
+            .form-group.row
+              label.col-xs-12.col-form-label(for='task-text') Задание
+              .col-xs-12
+                textarea#task-text.form-control(rows='4', placeholder='Привет. Это твое первое задание. Начинай с первой главы и сразу пиши конспект')
+            .form-group.row
+              .col-xs-4
+                button.btn.btn-blue(type='submit') Сохранить
+              .col-xs-8
+                p Применится ко всем пользователям сразу. осторожно!
+
         .col-xs-6
-          .form-group.row
+          .task-edit-right
             p
               | Проверочные тезисы конспекта (каждый на отдельной строке)
-            .col-xs-12
-              textarea.form-control(placeholder='Ключевая идея занимает примерно три строки мелким шрифтом.')
+            textarea.form-control(rows='10', placeholder='Ключевая идея занимает примерно три строки мелким шрифтом.')

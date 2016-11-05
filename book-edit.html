@@ -10,29 +10,27 @@
     <script src="https://code.jquery.com/jquery.min.js" async></script>
     <script src="assets/css/bootstrap.min.js" async></script>
     <script src="https://use.fontawesome.com/6df67120f9.js" async></script>
+    <script src="assets/js/custom.min.js" async></script>
   </head>
   <body>
     <header class="header header-admin">
       <nav class="navbar navbar-inverse header-top">
-        <div class="container">
-          <div class="navbar-header">
-            <button data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar" class="navbar-toggle collapsed"><span class="sr-only">Меню</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="#" class="header__logo-link pull-left">ТЧК</a>
-            <div class="statistic">
-              <p>1460 активных участников</p>
-              <p>На провереке<span class="badge">356</span></p>
-            </div>
+        <div class="container-non-responsive">
+          <div class="navbar-header clearfix"><a href="/" class="header-logo-link pull-left">ТЧК</a>
+            <div class="header-statistic pull-left"><span class="header-statistic-active">1460 активных участников</span><a href="#" class="header-statistic-check">На проверке<span class="badge badge-info">356</span></a></div>
+            <ul class="nav navbar-nav dropdown pull-right user-menu">
+              <li><a href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle">Глеб Кушедов <span class="arrow"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Редактировать</a></li>
+                  <li><a href="#">Выйти</a></li>
+                </ul>
+              </li>
+            </ul>
             <ul id="navbar" class="nav navbar-nav pull-right">
               <li><a href="#">Книги</a></li>
               <li><a href="#">Задания</a></li>
               <li><a href="#">FAQ</a></li>
               <li><a href="#">Рейтинг</a></li>
-              <li class="dropdown"><a href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle">Глеб Кушедов <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                  <li><a href="#">Редактировать</a></li>
-                  <li role="separator" class="divider"></li>
-                  <li><a href="#">Выйти</a></li>
-                </ul>
-              </li>
             </ul>
           </div>
         </div>

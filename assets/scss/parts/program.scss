@@ -1,0 +1,63 @@
+.program {
+
+  .program-step {
+
+    .h1 {
+      margin: 0;
+      padding: 15px 0 35px;
+      font-size: 50px;
+    }
+  }
+
+  .program-week {
+    margin-bottom: 30px;
+
+    .h2 {
+
+    }
+
+    table {
+      width: 100%;
+      margin-top: 10px;
+      border-bottom: 1px solid #DDDDDD;
+
+      td {
+        padding: 10px 0;
+        border-top: 1px solid #DDDDDD;
+        font-weight: bold;
+      }
+    }
+
+    .program-week-book {
+      width: 24%;
+      padding-left: 5px;
+    }
+
+    .program-week-type {
+      width: 11%;
+    }
+
+    .program-week-status {
+      width: 10%;
+    }
+
+    .program-week-points {
+      width: 13%;
+    }
+
+    .program-week-descr {
+      width: 39%;
+      color: rgba(0,0,0,.6);
+      font-weight: normal;
+      line-height: 1.3;
+    }
+
+    .program-week-btn {
+      width: 3%;
+      padding-right: 5px;
+    }
+  }
+
+
+
+}

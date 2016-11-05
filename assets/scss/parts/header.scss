@@ -115,6 +115,8 @@
 
 .user-menu {
 
+  &.nav { padding-left: 0; }
+
   & > li {
     
     a {
@@ -172,7 +174,7 @@
 .header-bottom {
   padding: 15px 0;
   background: $dark-medium;
-  color: $light-gray;
+  color: rgba(255,255,255,.6);
 
   @media (max-width: $desktop) {
     display: none;
@@ -181,7 +183,11 @@
   .status-item {
     width: 100%;
     font-size: 0;
-    opacity: .6;
+    color: rgba(255, 255, 255, .6);
+
+    &:hover {
+      color: rgba(255, 255, 255, 1);
+    }
   }
 
   .status-num {
@@ -207,12 +213,11 @@
   .status-item-fund {
     display: inline-block;
     text-align: right;
-    color: $light-gray;
-    opacity: .6;
+    color: rgba(255, 255, 255, .6);
     cursor: pointer;
 
     &:hover {
-      opacity: 1;
+      color: rgba(255, 255, 255, 1);
     }
 
     .status-num {

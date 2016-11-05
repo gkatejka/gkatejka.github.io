@@ -1,0 +1,50 @@
+.header-admin {
+  min-width: 1200px;
+  box-sizing: border-box;
+
+  @media (max-width: $tablet) {
+    .header-logo-link {
+      float: left;
+      width: auto;
+      text-align: left;
+    }
+
+    .header-top .nav {
+      display: block;
+      padding-left: 35px;
+
+      & > li {
+        display: inline-block;
+      }
+    }
+
+  }
+
+  .header-statistic {
+    padding: 15px 0;
+    padding-left: 60px;
+    line-height: 20px;
+  }
+
+  .header-statistic-active,
+  .header-statistic-check {
+    color: $white;
+    font-weight: 300;
+    text-decoration: none;
+  }
+
+  .header-statistic-active {
+    margin-right: 45px;
+  }
+
+  .header-statistic-check {
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    .badge {
+      margin-left: 8px;
+    }
+  }
+}

@@ -1,0 +1,138 @@
+.user {
+
+
+  .user-name {
+    margin: 0;
+    padding: 35px 0 30px;
+    font-size: 24px;
+    line-height: 1.5;
+    font-weight: bold;
+  }
+
+  .label {
+    margin-left: 20px;
+    vertical-align: middle;
+  }
+
+  .user-about {
+    margin-bottom: 30px;
+    box-sizing: border-box;
+    padding: 14px 15px 14px;
+    border: 1px solid #D0D0D0;
+    border-radius: 3px;
+  }
+
+  .user-list {
+    padding: 3px 0 0;
+    margin: 0;
+    list-style: none;
+
+    li {
+      display: inline-block;
+      margin-right: 30px;
+    }
+  }
+
+  .user-list-title {
+    padding-right: 10px;
+    color: rgba(0,0,0,.5);
+    font-weight: bold;
+
+  }
+
+  .user-list-muted {
+    padding-left: 5px;
+    color: rgba(0,0,0,.5);
+  }
+
+  .user-about-menu {
+    margin: 0;
+    padding: 0;
+
+    & > li.open > a {
+      background-color: transparent;
+    }
+
+    & > li > a {
+      padding: 0;
+      color: $black;
+
+      &:hover {
+        background-color: transparent;
+      }
+
+      .caret {
+        margin-left: 12px;
+      }
+    }
+
+    .dropdown-menu {
+      padding: 10px 0;
+      padding-left: 15px;
+      border-radius: 3px;
+      text-align: right;
+      top: 30px;
+      left: auto;
+      right: -16px;
+      
+
+      a:hover {
+        background-color: transparent;
+        color: $red;
+      }
+    }
+  }
+
+  .user-works {
+    width: 100%;
+    margin-top: 20px;
+    color: rgba(0,0,0,.5);
+
+    tr {
+      border-bottom: 1px solid #DDDDDD;
+    }
+
+    td {
+      padding: 20px 0;
+    }
+
+    .user-works-book {
+      padding-left: 5px;
+      width: 20%;
+    }
+
+    .user-works-type {
+      color: $black;
+      width: 18%;
+
+      .muted {
+        padding-left: 20px;
+      }
+    }
+
+    .user-works-status {
+      width: 12%;
+
+      .label {
+        margin: 0;
+      }
+    }
+
+    .user-works-points {
+      font-size: 13px;
+      width: 19%;
+    }
+
+    .user-works-step {
+      padding-right: 5px;
+      text-align: right;
+      color: rgba(0,0,0,.4);
+      width: 31%;
+    }
+  }
+
+  .label-success {
+    background: $green-dark;
+  }
+
+}

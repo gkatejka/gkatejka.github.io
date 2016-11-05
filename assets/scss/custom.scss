@@ -59,6 +59,11 @@ label {
 // PAGES
 .gradient-sidebar {
   height: 100%;
+  background: linear-gradient(to right, rgba(174, 192,200, .1) 35%, transparent 65%);
+
+  @media (max-width: $desktop) {
+    background: $white;
+  }
 
   & > .container {
     height: 100%;
@@ -128,12 +133,25 @@ label {
   }
 }
 
+.login-page {
+  height: 100%;
+  background: rgba(135, 163,176,.1);
+  position: relative;
+}
+
 .rating-page {
   height: 100%;
   padding-top: 35px;
   background: $white;
-  
 }
+
+.admin-page {
+  height: 100%;
+  min-width: 1200px;
+  box-sizing: border-box;
+  background: rgba(174, 192,200,.1);
+}
+
 
 .posts-sutitle {
   padding: 0 0 10px;
@@ -143,20 +161,31 @@ label {
 
 
 
+
 @import "parts/base";
 @import "parts/btn";
 @import "parts/label";
 @import "parts/alert";
+@import "parts/badge";
 @import "parts/media";
 @import "parts/progress";
+@import "parts/breadcrumb";
 @import "parts/status-item";
 
 @import "parts/header";
+@import "parts/header-admin";
 @import "parts/sidebar";
 @import "parts/dashbord";
 @import "parts/book";
 @import "parts/report";
 @import "parts/repost";
 @import "parts/rating";
+@import "parts/login-form";
+@import "parts/users";
+@import "parts/user";
+@import "parts/admin-head";
+@import "parts/program";
+@import "parts/check-work";
+@import "parts/task-edit";
 
 @import "parts/book-page";

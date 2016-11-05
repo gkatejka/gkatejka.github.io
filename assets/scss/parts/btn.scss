@@ -3,6 +3,7 @@
   font-weight: 300;
   border-radius: 4px;
   padding: 9px 20px;
+  transition: 200ms linear;
   
   &:active:hover,
   &:focus {
@@ -10,6 +11,36 @@
   }
 }
 
+.btn-default {
+  background: #CED3D8;
+  border-color: #CED3D8;
+  color: rgba(37,37,37,.8);
+  
+  &:hover,
+  &:focus,
+  &:active:hover {
+    background: lighten(#CED3D8, 3%);
+    border-color: lighten(#CED3D8, 3%);
+  }
+
+  &:active {
+    background: darken(#CED3D8, 3%);
+    border-color: darken(#CED3D8, 3%);
+  }
+}
+
+.btn-clear {
+  background: transparent;
+  border-color: rgba(151,151,151,.32);
+  border-radius: 3px;
+  color: rgba(28,28,28, .6);
+
+  &:hover,
+  &:focus,
+  &:active:hover {
+    border-color: #333;
+  }
+}
 
 .btn-primary {
   background: $dark;
@@ -64,6 +95,26 @@
   }
 }
 
+.btn-blue {
+  background: $primary-blue;
+  border-color: $primary-blue;
+  color: $white;
+
+  &:hover,
+  &:focus,
+  &:active:hover {
+    color: $white;
+    background: lighten($primary-blue, 3%);
+    border-color: lighten($primary-blue, 3%);
+  }
+
+  &:active {
+    color: $white;
+    background: darken($primary-blue, 3%);
+    border-color: darken($primary-blue, 3%);
+  }
+}
+
 
 .btn-clock {
   padding-left: 35px;
@@ -76,7 +127,7 @@
     background-size: 14px;
     position: absolute;
     left: 10px;
-    top: 8px;
+    top: 11px;
     content: '';
   }
 }
@@ -117,7 +168,7 @@
 }
 
 
-.btn-repost-fb {
+.btn-fb {
   background: #3C56A1;
   border-color: #3C56A1;
   color: $white;
@@ -140,7 +191,7 @@
 }
 
 
-.btn-repost-vk {
+.btn-vk {
   background: #4372A6;
   border-color: #4372A6;
   color: $white;
@@ -168,4 +219,23 @@
   border-color: #D0D0D0;
   color: #2E2D2D;
   font-size: 13px;
+}
+
+.btn-edit {
+  display: inline-block;
+  vertical-align: middle;
+  width: 33px;
+  height: 33px;
+  padding: 0;
+  background:transparent url('../img/svg/pen.svg') right center no-repeat;
+  background-size: 16px;
+  border: none;
+  outline: none;
+  font-size: 0;
+  cursor: pointer;
+  
+  &:hover {
+    background:transparent url('../img/svg/pen-hover.svg') right center no-repeat;
+    background-size: 16px;
+  }
 }

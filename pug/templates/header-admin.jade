@@ -1,20 +1,26 @@
 header.header.header-admin
 
   //- главная навигация
-
   nav.navbar.navbar-inverse.header-top
-    .container
-      .navbar-header
-        button.navbar-toggle.collapsed(data-toggle='collapse',data-target='#navbar', aria-expanded='false', aria-controls='navbar')
-          span.sr-only Меню
-          span.icon-bar
-          span.icon-bar
-          span.icon-bar
-        a.header__logo-link(href='#').pull-left ТЧК
-        .statistic
-          p 1460 активных участников
-          p На провереке
-            span.badge 356
+    .container-non-responsive
+      .navbar-header.clearfix
+        a.header-logo-link(href='/').pull-left ТЧК
+        .header-statistic.pull-left
+          span.header-statistic-active 1460 активных участников
+          a.header-statistic-check(href='#') На проверке
+            span.badge.badge-info 356
+        //- Выпадающее меню профиля
+        ul.nav.navbar-nav.dropdown.pull-right.user-menu
+          li
+            a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
+              | Глеб Кушедов 
+              span.arrow
+            ul.dropdown-menu
+              li
+                a(href='#') Редактировать
+              li
+                a(href='#') Выйти
+        //- Основное меню
         ul#navbar.nav.navbar-nav.pull-right
           li
             a(href='#') Книги
@@ -24,15 +30,3 @@ header.header.header-admin
             a(href='#') FAQ
           li
             a(href='#') Рейтинг
-
-          //- Выпадающее меню профиля
-          li.dropdown
-            a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
-              | Глеб Кушедов 
-              span.caret
-            ul.dropdown-menu
-              li
-                a(href='#') Редактировать
-              li.divider(role='separator')
-              li
-                a(href='#') Выйти

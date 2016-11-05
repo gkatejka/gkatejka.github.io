@@ -10,11 +10,13 @@ mixin book
           .progress-bar.progress-bar-success(role='progressbar', aria-valuenow='0', aria-valuemin='0', aria-valuemax='100', style="width:35%")
         small Прочитать 0 – 50%
 
+
 mixin posts(postTitle, postText)
   article
     h2.h2=postTitle
     .posts-text
       p=postText
+
 
 mixin posts-sutitle(postTitle, postSubtitle, postText)
   article
@@ -23,6 +25,7 @@ mixin posts-sutitle(postTitle, postSubtitle, postText)
     .posts-text
       p=postText
 
+
 mixin editpanel(title, btnText)
   .edit-panel
     .container.clearfix
@@ -30,10 +33,12 @@ mixin editpanel(title, btnText)
       button.btn.btn-default.pull-right= btnText
   hr
 
+
+//- Рейтинг пользователей
 mixin rating(num, personName, personRead, ratingStep, ratingAll)
   tr
     td.rating-person
-      a(href="#")
+      a(href='user.html')
         table
           tr
             td=num
@@ -44,3 +49,50 @@ mixin rating(num, personName, personRead, ratingStep, ratingAll)
               .rating-person-read= personRead
             td.rating-points-step= ratingStep
             td.rating-points-all= ratingAll
+
+
+//- Рейтинг пользователей (админ) - активен
+mixin rating-users-active(userId1, userName1, userPoints1, userWorks1)
+  tr
+    td(colspan="5")
+      a(href='user.html')
+        table.users-table-row
+          tr
+            td.users-table-id= userId1
+            td.users-table-user
+              span.users-table-img
+                img(src='http://placehold.it/34x34', width='34', height='34', alt='')
+              span.users-table-name=userName1
+            td.users-table-status
+              .label.label-success активен
+            td.users-table-points=userPoints1
+            td.users-table-works=userWorks1
+
+//- Рейтинг пользователей (админ) - неактивен
+mixin rating-users-inactive(userId2, userName2, userPoints2, userWorks2)
+  tr
+    td(colspan="5")
+      a(href='#')
+        table.users-table-row
+          tr
+            td.users-table-id= userId2
+            td.users-table-user
+              span.users-table-img
+                img(src='http://placehold.it/34x34', width='34', height='34', alt='')
+              span.users-table-name=userName2
+            td.users-table-status
+              .label неактивен
+            td.users-table-points=userPoints2
+            td.users-table-works=userWorks2
+
+//- Программа > Этап > Неделя > шаг
+mixin program-week-step(bookTitle, stepType, stepStatus, stepPoints, stepText)
+  tr
+    td.program-week-book=bookTitle
+    td.program-week-type=stepType
+    td.program-week-status=stepStatus
+    td.program-week-points=stepPoints
+    td.program-week-descr=stepText
+    td.program-week-btn
+      a.btn-edit(href='task-edit.html') Редактировать
+

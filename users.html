@@ -10,35 +10,138 @@
     <script src="https://code.jquery.com/jquery.min.js" async></script>
     <script src="assets/css/bootstrap.min.js" async></script>
     <script src="https://use.fontawesome.com/6df67120f9.js" async></script>
+    <script src="assets/js/custom.min.js" async></script>
   </head>
   <body>
-    <main></main>
     <header class="header header-admin">
       <nav class="navbar navbar-inverse header-top">
-        <div class="container">
-          <div class="navbar-header">
-            <button data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar" class="navbar-toggle collapsed"><span class="sr-only">Меню</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="#" class="header__logo-link pull-left">ТЧК</a>
-            <div class="statistic">
-              <p>1460 активных участников</p>
-              <p>На провереке<span class="badge">356</span></p>
-            </div>
+        <div class="container-non-responsive">
+          <div class="navbar-header clearfix"><a href="/" class="header-logo-link pull-left">ТЧК</a>
+            <div class="header-statistic pull-left"><span class="header-statistic-active">1460 активных участников</span><a href="#" class="header-statistic-check">На проверке<span class="badge badge-info">356</span></a></div>
+            <ul class="nav navbar-nav dropdown pull-right user-menu">
+              <li><a href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle">Глеб Кушедов <span class="arrow"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Редактировать</a></li>
+                  <li><a href="#">Выйти</a></li>
+                </ul>
+              </li>
+            </ul>
             <ul id="navbar" class="nav navbar-nav pull-right">
               <li><a href="#">Книги</a></li>
               <li><a href="#">Задания</a></li>
               <li><a href="#">FAQ</a></li>
               <li><a href="#">Рейтинг</a></li>
-              <li class="dropdown"><a href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle">Глеб Кушедов <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                  <li><a href="#">Редактировать</a></li>
-                  <li role="separator" class="divider"></li>
-                  <li><a href="#">Выйти
-                      <div class="container"></div></a></li>
-                </ul>
-              </li>
             </ul>
           </div>
         </div>
       </nav>
     </header>
+    <main class="users admin-page">
+      <div class="container-non-responsive">
+        <div class="users-head clearfix">
+          <h1 class="users-title pull-left">1460 участников</h1>
+          <div class="pull-right">
+            <button class="btn btn-clear">Добавить задание</button>
+          </div>
+        </div>
+        <table class="users-table">
+          <thead>
+            <tr>
+              <td class="users-table-id">Id</td>
+              <td class="users-table-user"><a href="#">Читатель<span class="caret"></span></a></td>
+              <td class="users-table-status">Статус</td>
+              <td class="users-table-points"><a href="#">Балов набрано<span class="caret"></span></a></td>
+              <td class="users-table-works">Работ</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td colspan="5"><a href="user.html">
+                  <table class="users-table-row">
+                    <tr>
+                      <td class="users-table-id">2555</td>
+                      <td class="users-table-user"><span class="users-table-img"><img src="http://placehold.it/34x34" width="34" height="34" alt=""/></span><span class="users-table-name">Ангелина Куколевская</span></td>
+                      <td class="users-table-status">
+                        <div class="label label-success">активен</div>
+                      </td>
+                      <td class="users-table-points">255</td>
+                      <td class="users-table-works">5</td>
+                    </tr>
+                  </table></a></td>
+            </tr>
+            <tr>
+              <td colspan="5"><a href="user.html">
+                  <table class="users-table-row">
+                    <tr>
+                      <td class="users-table-id">2343</td>
+                      <td class="users-table-user"><span class="users-table-img"><img src="http://placehold.it/34x34" width="34" height="34" alt=""/></span><span class="users-table-name">Горислава Сморчкова</span></td>
+                      <td class="users-table-status">
+                        <div class="label label-success">активен</div>
+                      </td>
+                      <td class="users-table-points">432</td>
+                      <td class="users-table-works">6</td>
+                    </tr>
+                  </table></a></td>
+            </tr>
+            <tr>
+              <td colspan="5"><a href="#">
+                  <table class="users-table-row">
+                    <tr>
+                      <td class="users-table-id">2344</td>
+                      <td class="users-table-user"><span class="users-table-img"><img src="http://placehold.it/34x34" width="34" height="34" alt=""/></span><span class="users-table-name">Луиза Леонтьева</span></td>
+                      <td class="users-table-status">
+                        <div class="label">неактивен</div>
+                      </td>
+                      <td class="users-table-points">502</td>
+                      <td class="users-table-works">7</td>
+                    </tr>
+                  </table></a></td>
+            </tr>
+            <tr>
+              <td colspan="5"><a href="#">
+                  <table class="users-table-row">
+                    <tr>
+                      <td class="users-table-id">2346</td>
+                      <td class="users-table-user"><span class="users-table-img"><img src="http://placehold.it/34x34" width="34" height="34" alt=""/></span><span class="users-table-name">Мстислав Соболев</span></td>
+                      <td class="users-table-status">
+                        <div class="label">неактивен</div>
+                      </td>
+                      <td class="users-table-points">220</td>
+                      <td class="users-table-works">5</td>
+                    </tr>
+                  </table></a></td>
+            </tr>
+            <tr>
+              <td colspan="5"><a href="#">
+                  <table class="users-table-row">
+                    <tr>
+                      <td class="users-table-id">2346</td>
+                      <td class="users-table-user"><span class="users-table-img"><img src="http://placehold.it/34x34" width="34" height="34" alt=""/></span><span class="users-table-name">Сергей Лукерин</span></td>
+                      <td class="users-table-status">
+                        <div class="label">неактивен</div>
+                      </td>
+                      <td class="users-table-points">708</td>
+                      <td class="users-table-works">8</td>
+                    </tr>
+                  </table></a></td>
+            </tr>
+            <tr>
+              <td colspan="5"><a href="#">
+                  <table class="users-table-row">
+                    <tr>
+                      <td class="users-table-id">2347</td>
+                      <td class="users-table-user"><span class="users-table-img"><img src="http://placehold.it/34x34" width="34" height="34" alt=""/></span><span class="users-table-name">Моисей Федотов</span></td>
+                      <td class="users-table-status">
+                        <div class="label">неактивен</div>
+                      </td>
+                      <td class="users-table-points">400</td>
+                      <td class="users-table-works">5</td>
+                    </tr>
+                  </table></a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
   </body>
 </html>

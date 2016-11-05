@@ -1,0 +1,138 @@
+.task-edit {
+  padding-top: 10px;
+
+  .task-edit-title {
+    margin: 0;
+    padding: 0 0 25px;
+    font-size: 26px;
+  }
+
+  .task-edit-left {
+    padding-right: 50px;
+
+    label {
+      padding-top: 8px;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .form-group {
+      margin-bottom: 25px;
+      font-size: 0;
+
+      .form-control-small {
+        max-width: 50px;
+      }
+    }
+
+    .form-group-step,
+    .form-group-week {
+      display: inline-block;
+      vertical-align: middle;
+      box-sizing: border-box;
+      text-align: right;
+      width: 50%;
+
+      label,
+      input {
+        display: inline-block;
+        vertical-align: middle;
+      }
+
+      label {
+        padding: 0;
+        line-height: 1;
+      }
+
+      input {
+        max-width: 50px;
+        text-align: center;
+        margin-left: 10px;
+      }
+    }
+
+    .form-group-step {
+
+      label {
+        width: 40%;
+      }
+
+      input {
+        width: 60%;
+      }
+    }
+
+    textarea {
+      margin-top: 15px;
+    }
+
+    .btn-blue {
+      width: 100%;
+      padding: 10px 20px;
+      font-size: 15px;
+      font-weight: 500;
+    }
+
+    p {
+      padding-top: 11px;
+      color: rgba(0,0,0,.6);
+    }
+  }
+  
+  // Баллы
+  label.label-with-text {
+    display: block;
+    margin-bottom: 0;
+    padding-top: 4px;
+  }
+
+  .label-text {
+    display: block;
+    font-size: 11px;
+    color: rgba(0,0,0,.6);
+  }
+  
+  // Границы
+  .form-group-border {
+    text-align: right;
+
+    .form-group-border-label,
+    .input-arrow,
+    input {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    .form-group-border-label {
+      text-align: left;
+      min-width: 100px;
+      margin-right: 5px;
+    }
+
+    .input-arrow {
+      width: 35px;
+      font-size: 14px;
+      color: rgba(0,0,0,.6);
+      text-align: center;
+    }
+
+    input {
+      width: 50px;
+    }
+  }
+
+
+  .task-edit-right {
+    padding-top: 9px;
+
+    p {
+      padding-bottom: 25px;
+      color: rgba(0,0,0,.6);
+    }
+
+    textarea {
+      color: $black;
+      outline: none;
+    }
+  }
+}

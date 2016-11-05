@@ -3,6 +3,32 @@ doctype html
 html
   include ./templates/head-admin.jade 
   body
-    main
-    include ./templates/header-admin.jade  
-      .container
+    include ./templates/header-admin.jade
+    main.users.admin-page
+      .container-non-responsive
+        .users-head.clearfix
+          h1.users-title.pull-left 1460 участников
+          .pull-right
+            button.btn.btn-clear Добавить задание
+
+        table.users-table
+          thead
+            tr
+              td.users-table-id Id
+              td.users-table-user
+                a(href='#') Читатель
+                  span.caret
+              td.users-table-status Статус
+              td.users-table-points
+                a(href='#') Балов набрано
+                  span.caret
+              td.users-table-works Работ
+          tbody
+            +rating-users-active('2555', 'Ангелина Куколевская', '255', '5')
+            +rating-users-active('2343', 'Горислава Сморчкова', '432', '6')
+            +rating-users-inactive('2344', 'Луиза Леонтьева', '502', '7')
+            +rating-users-inactive('2346', 'Мстислав Соболев', '220', '5')
+            +rating-users-inactive('2346', 'Сергей Лукерин', '708', '8')
+            +rating-users-inactive('2347', 'Моисей Федотов', '400', '5')
+
+
