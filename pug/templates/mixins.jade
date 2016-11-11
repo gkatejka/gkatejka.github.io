@@ -33,6 +33,21 @@ mixin editpanel(title, btnText)
       button.btn.btn-default.pull-right= btnText
   hr
 
+//- Успехи пользователя
+mixin user-success(numImg, bookName, bookAuthor, num1, num2, num3, num4, num5)
+  tr
+    td.user-rating-book
+      a.media(href='')
+        .media-left
+          img(src='assets/img/book-thumb-#{numImg}.png', width='48', height='69', alt='')
+        .media-body
+          .media-book-name=bookName
+          .media-book-author=bookAuthor
+    td=num1
+    td=num2
+    td=num3
+    td=num4
+    td=num5
 
 //- Рейтинг пользователей
 mixin rating(num, personName, personRead, ratingStep, ratingAll)

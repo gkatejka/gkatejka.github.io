@@ -1,0 +1,93 @@
+.user-rating {
+  margin: 0 0 70px;
+
+  .user-rating-table {
+
+    tr {
+      border-bottom: 1px solid #DDD;
+
+      &.user-rating-total {
+        border-bottom: none;
+
+        td:first-child {
+          text-align: left;
+          color: #000;
+          font-size: 18px;
+        }
+
+        td {
+          text-align: right;
+
+          span {
+            padding-right: 15px;
+          }
+
+          .btn {
+            padding: 5px 15px;
+          }
+        }
+      }
+    }
+
+    td {
+      width: 12.4%;
+      text-align: center;
+    }
+
+    td:first-child {
+      width: 38%;
+      text-align: left;
+    }
+
+    thead td {
+      padding: 10px 0 25px;
+      font-weight: 500;
+      color: rgba(0,0,0,.8);
+    }
+
+    tbody td {
+      padding: 15px 0;
+      color: rgba(0,0,0,.5);
+
+      &:first-child {
+        padding-right: 10%;
+      }
+    }
+  }
+
+  .user-rating-title {
+    font-size: 29px;
+  }
+
+  .user-rating-book {
+
+    a {
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+    .media-left {
+      padding-right: 15px;
+      vertical-align: top;
+    }
+
+    .media-body {
+      vertical-align: middle;
+    }
+  }
+
+  .media-book-name {
+    padding-bottom: 5px;
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .media-book-author {
+    color: rgba(0,0,0,.5);
+    font-size: 12px;
+  }
+
+
+}
