@@ -1,4 +1,5 @@
 .check-work {
+  padding-bottom: 50px;
 
   .alert {
     margin-bottom: 30px;
@@ -51,7 +52,20 @@
     padding-top: 11px;
 
     .h2 {
+      display: inline-block;
+      vertical-align: baseline;
       padding-bottom: 25px;
+    }
+
+    p {
+      padding-left: 20px;
+      display: inline-block;
+      vertical-align: baseline;
+      color: rgba(0,0,0,.5);
+
+      span {
+        color: #000;
+      }
     }
   }
 

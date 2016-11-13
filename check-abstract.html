@@ -70,13 +70,14 @@
             </div>
           </div>
           <div class="col-xs-5">
-            <div class="work-check-body">
+            <div id="checkIdeas" class="work-check-body">
               <form action="/echo">
                 <div class="work-check-task">
                   <h3 class="h2">Ключевые идеи</h3>
-                  <div class="work-check-checkboxes">
+                  <p>Максимум баллов: <span>100</span></p>
+                  <div id="thesesInputs" class="work-check-checkboxes">
                     <div class="input-group">
-                      <input id="point1" type="checkbox" checked>
+                      <input id="point1" type="checkbox">
                       <label for="point1">Ключевая идея занимает примерно три строки мелким шрифтом. Для получения положительных баллов читатель должен сформулировать ее в конспекте</label>
                     </div>
                     <div class="input-group">
@@ -84,32 +85,32 @@
                       <label for="point2">Если ключевая идея не сформулирована - читательно получает меньшее количество баллов (пропорционально количеству упущеннных идей), что сказывается на его рейтинге. </label>
                     </div>
                     <div class="input-group">
-                      <input id="point3" type="checkbox" checked>
-                      <label for="chapter3">Плюс такой системы – быстрые проверки и небольшой разброс при оценке разными декабристами</label>
+                      <input id="point3" type="checkbox">
+                      <label for="point3">Плюс такой системы – быстрые проверки и небольшой разброс при оценке разными декабристами</label>
                     </div>
                     <div class="input-group">
-                      <input id="point4" type="checkbox" checked>
+                      <input id="point4" type="checkbox">
                       <label for="point4">Если баллы низкие – конспект можно отправить на доработку, но баллы все равно будут проставлены. Если читатель не сдаст повтоно до дедлайна – баллы сохраняются</label>
                     </div>
                   </div>
                 </div>
-                <div class="work-check-row">
+                <div id="thesesQuality" class="work-check-row">
                   <h3 class="work-check-title">Оцените качество конспекта</h3>
                   <div class="btn-group btn-group-justified">
                     <div class="btn-group">
-                      <input type="radio" id="markquality1" name="quality">
+                      <input type="radio" id="markquality1" name="quality" value="-25">
                       <label for="markquality1">Посредственно</label>
                     </div>
                     <div class="btn-group">
-                      <input type="radio" id="markquality2" name="quality">
+                      <input type="radio" id="markquality2" name="quality" value="-15">
                       <label for="markquality2">Так себе</label>
                     </div>
                     <div class="btn-group">
-                      <input type="radio" id="markquality3" name="quality" checked>
+                      <input type="radio" id="markquality3" name="quality" value="0" checked>
                       <label for="markquality3">Хорошо</label>
                     </div>
                     <div class="btn-group">
-                      <input type="radio" id="markquality4" name="quality">
+                      <input type="radio" id="markquality4" name="quality" value="15">
                       <label for="markquality4">Отлично!</label>
                     </div>
                   </div>
@@ -121,7 +122,7 @@
                   <div class="col-xs-5">
                     <button type="submit" class="btn btn-blue clearfix">
                       <div class="pull-left">Принять</div>
-                      <div class="pull-right">75 баллов</div>
+                      <div class="pull-right"><span id="pointsAll">0</span> баллов</div>
                     </button>
                   </div>
                   <div class="col-xs-7">

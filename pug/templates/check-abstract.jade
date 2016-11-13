@@ -19,13 +19,15 @@
             | Идеи гедонизма занимают центральное место в утилитаризме Милля и Бентама, однако душа трансформирует данный гештальт, хотя в официозе принято обратное. Ощущение мира творит из ряда вон выходящий закон внешнего мира, однако Зигварт считал критерием истинности необходимость и общезначимость, для которых нет никакой опоры в объективном мире. Адживика возможна. Гипотеза, иcходя из того, что подчеркивает контраст. Контраст не так уж очевиден.
 
     .col-xs-5
-      .work-check-body
+      .work-check-body#checkIdeas
         form(action='/echo')
           .work-check-task
             h3.h2 Ключевые идеи
-            .work-check-checkboxes
+            p Максимум баллов: 
+              span 100
+            .work-check-checkboxes#thesesInputs
               .input-group
-                input#point1(type='checkbox', checked)
+                input#point1(type='checkbox')
                 label(for='point1')
                   | Ключевая идея занимает примерно три строки мелким шрифтом. Для получения положительных баллов читатель должен сформулировать ее в конспекте
               .input-group
@@ -33,28 +35,28 @@
                 label(for='point2')
                   | Если ключевая идея не сформулирована - читательно получает меньшее количество баллов (пропорционально количеству упущеннных идей), что сказывается на его рейтинге. 
               .input-group
-                input#point3(type='checkbox', checked)
-                label(for='chapter3')
+                input#point3(type='checkbox')
+                label(for='point3')
                   | Плюс такой системы – быстрые проверки и небольшой разброс при оценке разными декабристами
               .input-group
-                input#point4(type='checkbox', checked)
+                input#point4(type='checkbox')
                 label(for='point4')
                   | Если баллы низкие – конспект можно отправить на доработку, но баллы все равно будут проставлены. Если читатель не сдаст повтоно до дедлайна – баллы сохраняются
 
-          .work-check-row
+          .work-check-row#thesesQuality
             h3.work-check-title Оцените качество конспекта
             .btn-group.btn-group-justified
               .btn-group
-                input(type='radio', id='markquality1', name='quality')
+                input(type='radio', id='markquality1', name='quality', value='-25')
                 label(for='markquality1') Посредственно
               .btn-group
-                input(type='radio', id='markquality2', name='quality')
+                input(type='radio', id='markquality2', name='quality', value='-15')
                 label(for='markquality2') Так себе
               .btn-group
-                input(type='radio', id='markquality3', name='quality', checked)
+                input(type='radio', id='markquality3', name='quality', value='0', checked)
                 label(for='markquality3') Хорошо
               .btn-group
-                input(type='radio', id='markquality4', name='quality')
+                input(type='radio', id='markquality4', name='quality', value='15')
                 label(for='markquality4') Отлично!
 
           .work-check-row
@@ -64,6 +66,8 @@
             .col-xs-5
               button.btn.btn-blue.clearfix(type='submit')
                 .pull-left Принять
-                .pull-right 75 баллов
+                .pull-right
+                  span#pointsAll 0
+                  |  баллов
             .col-xs-7
               button.btn.btn-default(type='button') Отправить на доработку

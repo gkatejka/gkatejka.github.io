@@ -1,6 +1,12 @@
 .media {
   color: $black;
 
+  img {
+    display: block;
+    max-width: 55px;
+    height: auto;
+  }
+
   p {
     padding-top: 5px;
     font-size: 14px;
