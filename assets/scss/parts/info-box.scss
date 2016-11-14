@@ -1,4 +1,86 @@
 .info-box-wrap {
+  text-align: center;
+  color: $black;
   
-  
+  .info-box-label {
+    padding: 12px 0;
+    background: $light-orange;
+    border-radius: 4px;
+    color: $white;
+    font-size: 15px;
+    font-weight: 300;
+
+    &.success {
+      background: $green;
+    }
+  }
+
+  .info-box {
+    margin-top: 15px;
+    background: $white;
+  }
+
+  .info-box-pic {
+    height: 215px;
+    background-color: #eee;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+  }
+
+  .info-box-body {
+    padding: 50px 90px;
+    border: 1px solid #E1DDDD;
+    border-top: none;
+    border-radius: 0 0 4px 4px;
+
+    @media (max-width: $tablet) {
+      padding: 30px 10%;
+    }
+    
+    &.with-top-title {
+      padding-top: 30px;
+    }
+
+    .info-box-text{
+      font-size: 16px;
+      line-height: 1.5;
+      width: 80%;
+      margin: 0 auto;
+
+      @media (max-width: $tablet) {
+        width: 100%;
+        font-size: 14px;
+      }
+    }
+
+    .btn {
+      margin-top: 10px;
+    }
+
+  }
+
+  .info-box-toptitle {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-size: 18px;
+
+    @media (max-width: $tablet) {
+      font-size: 16px;
+    }
+  }
+
+  .info-box-title {
+    margin: 0;
+    padding: 0 0 20px;
+    font-size: 67px;
+    line-height: 1.2;
+    font-weight: 900;
+
+    @media (max-width: $tablet) {
+      font-size: 30px;
+      padding-bottom: 10px;
+    }
+  }
 }

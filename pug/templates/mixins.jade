@@ -111,3 +111,22 @@ mixin program-week-step(bookTitle, stepType, stepStatus, stepPoints, stepText)
     td.program-week-btn
       a.btn-edit(href='task-edit.html') Редактировать
 
+mixin info-box(labelText, imgName, boxToptitle, boxTitle, boxText, btnText)
+  .info-box-wrap
+    //- attributes == {class: "btn"}
+    .info-box-label(class!=attributes.class)= labelText
+    .info-box
+      .info-box-pic(style="background-image: url('assets/img/#{imgName}.jpg');")
+      .info-box-body.with-top-title
+        p.info-box-toptitle= boxToptitle
+        h1.info-box-title= boxTitle
+        p.info-box-text=boxText
+        a.btn.btn-blue(href='/')=btnText
+
+mixin info-box-close(imgName, boxTitle, boxText)
+  .info-box-wrap
+    .info-box
+      .info-box-pic(style="background-image: url('assets/img/#{imgName}.jpg');")
+      .info-box-body
+        h1.info-box-title= boxTitle
+        p.info-box-text=boxText

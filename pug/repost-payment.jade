@@ -1,0 +1,11 @@
+include ./templates/mixins.jade
+doctype html
+html
+  include ./templates/head-report.jade 
+  body
+    include ./templates/header.jade  
+    main.info-page
+      .container
+        .row
+          .col-md-8.col-md-offset-2.col-xs-12
+            +info-box('Ваш аккаунт заблокирован', 'bg-payment', '', 'Требуется оплата', 'Мы не получии ваш платеж, если вы оплачивали участие в проекте больше 48 часов назад, пожалуйста, напишите нам в сообщения сообщества.', 'Я все оплатил')(class='')

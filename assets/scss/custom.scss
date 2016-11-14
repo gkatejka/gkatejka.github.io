@@ -159,6 +159,12 @@ label {
   color: rgba(4,4,4,.3)
 }
 
+.info-page {
+  padding: 45px 0;
+  height: 100%;
+  background: #F6F8F9;
+}
+
 
 
 
@@ -188,5 +194,6 @@ label {
 @import "parts/program";
 @import "parts/check-work";
 @import "parts/task-edit";
+@import "parts/info-box";
 
 @import "parts/book-page";

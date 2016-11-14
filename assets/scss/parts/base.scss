@@ -15,6 +15,11 @@ body {
   @media (max-width: $tablet) {
     font-size: 14px;
   }
+
+  &.info-page-body {
+    background: #F6F8F9;
+  }
+
 }
 
 h1,
