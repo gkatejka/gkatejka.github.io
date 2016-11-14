@@ -8,32 +8,25 @@
         span.book-author Дэн Вальдшмидтт
         span.muted 300 страниц, 9 глав
       .clearfix 
-        p.pull-left.muted Прочитать 0 – 50%
-        p.pull-right.muted.hidden Резервный блок
+        .pull-left
+          .muted.flag-icon Прочитать 0 – 50%
+        .pull-right.muted.hidden Резервный блок
 
   .book-nav-wrap#booknav
     .book-nav
-      .row
-        .col-sm-6
-          a.btn.btn-default.btn-block.clearfix(href='report.html')
-            span.pull-left Редактировать конспект
-            span.pull-right 100-200
-        .col-sm-6
-          a.btn.btn-info.btn-block.clearfix(href='report-sent.html')
-            span.pull-left Эссе на проверке
-            span.pull-right +10 - 100
-        .col-sm-6   
-          a.btn.btn-default.btn-block.clearfix(href='#')
-            span.pull-left Пройти тест
-            span.pull-right +10 - 100
-        .col-sm-6
-          a.btn.btn-default.btn-block.clearfix(href='repost.html')
-            span.pull-left Расшарить конспект
-            span.pull-right +10 - 100
-        .col-sm-6
-          a.btn.btn-default.btn-block.clearfix(href='report-video.html')
-            span.pull-left Опубликовать видео
-            span.pull-right +10 - 100
+
+      a(href="#").book-nav-link.clearfix
+        .pull-left Конспект
+          span.book-nav-points Можно набрать 50-100 баллов
+        .pull-right
+          .label.label-info Выполняется
+
+      a(href="#").book-nav-link.clearfix
+        .pull-left Поделиться в соцсетях
+          span.book-nav-points Набрано 15 баллов
+        .pull-right
+          .label.label-success Выполнено
+
 
   #bookprogress
     .row.book-progress

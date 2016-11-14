@@ -29,13 +29,17 @@
     .media-left {
       padding-right: 20px;
 
+      img {
+        max-width: 100px;
+      }
+
       @media (max-width: $tablet) {
         display: none;
       }
     }
 
     .book-about {
-      padding-bottom: 5px;
+      padding-bottom: 10px;
 
       @media (max-width: $tablet) {
         display: none;
@@ -50,6 +54,64 @@
 
   .book-nav {
     margin-bottom: 35px;
+  }
+
+  .book-nav-link {
+    margin-bottom: 15px;
+    display: block;
+    padding: 14px 15px;
+    background: #F6F4EB;
+    border: 1px solid #DFDFDF;
+    border-radius: 4px;
+
+    &:hover {
+      background: darken(#F6F4EB, 15%);
+    }
+
+    .pull-left {
+      color: $black;
+      font-size: 14px;
+      font-weight: bold;
+
+      @media (max-width: $tablet) {
+        width: 60%;
+        font-size: 12px;
+      }
+    }
+
+    .pull-right {
+      @media (max-width: $tablet) {
+        width: 40%;
+        text-align: right;
+      }
+    }
+
+    .book-nav-points {
+      padding-left: 15px;
+      color: #34485D;
+      font-size: 13px;
+      font-weight: normal;
+
+      @media (max-width: $tablet) {
+        display: block;
+        padding-left: 0;
+        padding-top: 3px;
+        font-size: 10px;
+      }
+    }
+
+    .label {
+      padding: .55em .9em;
+      font-size: 13px;
+
+      @media (max-width: $tablet) {
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 12px;
+      }
+    }
+
+
   }
 
   .book-progress {
@@ -84,13 +146,13 @@
     .progress-bar-info {
       
       &::before {
-        width: 10px;
-        height: 14px;
+        width: 16px;
+        height: 18px;
         background:transparent url('../img/svg/flag.svg') 0 0 no-repeat;
-        background-size: 10px 14px;
+        background-size: 16px 18px;
         position: absolute;
-        top: -18px;
-        right: -9px;
+        top: -22px;
+        right: -10px;
         content: '';
       }
     }

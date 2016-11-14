@@ -20,6 +20,13 @@
   transform-origin: 3px -3px 0;
 }
 
+.flag-icon {
+  padding: 5px 30px;
+  padding-right: 0;
+  background: transparent url('../img/svg/flag.svg') 1px center no-repeat;
+  background-size: 15px 18px;
+}
+
 input[type="checkbox"] {
   display: none;
 
