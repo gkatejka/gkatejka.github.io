@@ -1,0 +1,19 @@
+include ./templates/mixins.jade
+doctype html
+html
+  include ./templates/head-report.jade 
+  body
+    include ./templates/header.jade  
+    main.info-page
+      .container
+        .row
+          .col-md-8.col-md-offset-2.col-xs-12
+            .info-box-wrap
+              .info-box-label Ваш аккаунт заблокирован
+              .info-box
+                .info-box-pic(style="background-image: url('');")
+                .info-box-body
+                  h1.info-box-title Вы вылетели
+                  p
+                    | Вы&nbsp;не&nbsp;сдали отчет за&nbsp;неделю вовремя и&nbsp;теперь игра продолжается без вас. Иногда так случается. В&nbsp;следующий раз вам может повезти больше.
+                  a.btn.btn-blue Перейти на сайт

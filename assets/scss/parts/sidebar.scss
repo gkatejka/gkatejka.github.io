@@ -35,6 +35,66 @@
     display: none;
   }
 
+  .media-current-book {
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top: 1px solid rgba(151,151,151, .1);
+    z-index: 9;
+
+    &.active {
+      position: relative;
+
+      &:before {
+        opacity: 1;
+        width: 108%;
+        height: 100%;
+        background: $white;
+        border: 1px solid #EAEAEA;
+        border-radius: 4px;
+        position: absolute;
+        top: 14%;
+        left: -4%;
+        content: '';
+        z-index: -1;
+        transition: 400ms linear;
+
+
+        @media (max-width: $tablet) {
+          width: 104%;
+          height: 125%;
+          top: -12.5%;
+          left: -2%;
+        }
+      }
+    }
+
+    @media (max-width: $tablet) {
+      border-top: none;
+      padding-top: 0;
+    }
+
+    @media (max-width: $desktop) {
+      margin-bottom: 15px;
+      border-top: none;
+    }
+
+    .progress {
+      margin-bottom: 8px;
+    }
+
+    .btn {
+      margin-top: 15px;
+      padding-top: 6px;
+      padding-bottom: 6px;
+    }
+  }
+
+  &.sidebar-book .media-current-book {
+    @media (max-width: $tablet) {
+      display: none;
+    }
+  }
+
   .media-link {
     display: inline-block;
     margin-bottom: 40px;
@@ -90,11 +150,15 @@
     margin-top: 30px;
     border-top: 1px solid rgba(151,151,151, .1);
     border-bottom: 1px solid rgba(151,151,151, .1);
-    padding-top: 30px;
+    padding-top: 10px;
 
     @media (max-width: $tablet) {
       border: none;
       margin-top: 5px;
+    }
+
+    @media (max-width: $desktop) {
+      border-top: none;
     }
 
     &:hover {

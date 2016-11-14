@@ -1,4 +1,4 @@
-.sidebar
+.sidebar.sidebar-book
   h2.h3 Задания недели 2
   p.sub-text 16 сентября – 23 сентября
   .btn.btn-warning.btn-clock До дедлайна 2 дня и 1 час
@@ -16,35 +16,32 @@
           a(href='/book.html') Триггеры. Формируй привычки – закаляй характер
 
 
+  .media-current-book.active
+    .media
+      .media-left
+        img.pull-left(src='assets/img/book-thumb-2.png', alt='')
+      .media-body
+        p 7 навыков высокоэффективных людей
+          br
+        .progress
+          .progress-bar.progress-bar-success(role='progressbar', aria-valuenow='0', aria-valuemin='0', aria-valuemax='100', style="width:35%")
+        small Прочитать 50 – 100%. Выполняется
+
   .media-links-list
-
+    p.h3 Уже прочитаны
     a(href='/book.html').media-link
       .media
         .media-left
-          img.pull-left(src='assets/img/book-thumb-1.png', width='48', height='69', alt='')
+          img.pull-left(src='assets/img/book-thumb-1.png', alt='')
         .media-body
-          p 7 навыков высокоэффективных людей
+          p Триггеры. Формируй привычки – закаляй характер
             br
-          .progress
-            .progress-bar.progress-bar-success(role='progressbar', aria-valuenow='0', aria-valuemin='0', aria-valuemax='100', style="width:35%")
-          small Прочитать 50 – 100%. Выполняется
-
-    a(href='/book.html').media-link.media-link-active
-      .media
-        .media-left
-          img.pull-left(src='assets/img/book-thumb-2.png', width='48', height='69', alt='')
-        .media-body
-          p 7 навыков высокоэффективных людей
-            br
-          .progress
-            .progress-bar.progress-bar-success(role='progressbar', aria-valuenow='0', aria-valuemin='0', aria-valuemax='100', style="width:35%")
-          small Прочитать 50 – 100%. Выполняется
-          
+          small 526 баллов набрано
     a(href='/book.html').media-link
       .media
         .media-left
-          img.pull-left(src='assets/img/book-thumb-3.png', width='50', height='65', alt='')
+          img.pull-left(src='assets/img/book-thumb-3.png', alt='')
         .media-body
           p
-            | 7 навыков высокоэффективных людей
-          span.label.label-info На проверке
+            | На пределе
+          small 326 баллов набрано

@@ -10,7 +10,8 @@
     <script src="https://code.jquery.com/jquery.min.js" async></script>
     <script src="assets/css/bootstrap.min.js" async></script>
     <script src="https://use.fontawesome.com/6df67120f9.js" async></script>
-    <script src="assets/js/custom.min.js" async></script>
+    <script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
+    <script>tinymce.init({ selector:'#editarea', height: 300, content_css: ['assets/css/bootstrap.min.css', '/assets/css/custom.css'], menubar:false, toolbar: 'styleselect | bold italic | bullist numlist', statusbar: false, plugins: "autosave" });</script>
   </head>
   <body>
     <header class="header">
@@ -48,48 +49,19 @@
         </div>
       </div>
     </header>
-    <main class="gradient-sidebar">
+    <main class="info-page">
       <div class="container">
         <div class="row">
-          <aside class="col-md-4">
-            <div class="sidebar">
-              <h2 class="h3">Задания недели 2</h2>
-              <p class="sub-text">16 сентября – 23 сентября</p>
-              <div class="btn btn-warning btn-clock">До дедлайна 2 дня и 1 час</div>
-              <div class="media-current-book">
-                <div class="media">
-                  <div class="media-left"><img src="assets/img/book-thumb-2.png" alt="" class="pull-left"></div>
-                  <div class="media-body">
-                    <p>7 навыков высокоэффективных людей<br></p>
-                    <div class="progress">
-                      <div role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width:35%" class="progress-bar progress-bar-success"></div>
-                    </div><small>Прочитать 50 – 100%. Выполняется</small>
-                  </div><a href="/book.html" class="btn btn-success">Открыть книгу</a>
+          <div class="col-md-8 col-md-offset-2 col-xs-12">
+            <div class="info-box-wrap">
+              <div class="info-box-label">Ваш аккаунт заблокирован</div>
+              <div class="info-box">
+                <div style="background-image: url('');" class="info-box-pic"></div>
+                <div class="info-box-body">
+                  <h1 class="info-box-title">Вы вылетели</h1>
+                  <p>Вы&nbsp;не&nbsp;сдали отчет за&nbsp;неделю вовремя и&nbsp;теперь игра продолжается без вас. Иногда так случается. В&nbsp;следующий раз вам может повезти больше.</p><a class="btn btn-blue">Перейти на сайт</a>
                 </div>
               </div>
-              <div class="media-links-list">
-                <p class="h3">Уже прочитаны</p><a href="/book.html" class="media-link">
-                  <div class="media">
-                    <div class="media-left"><img src="assets/img/book-thumb-1.png" alt="" class="pull-left"></div>
-                    <div class="media-body">
-                      <p>Триггеры. Формируй привычки – закаляй характер<br></p><small>526 баллов набрано</small>
-                    </div>
-                  </div></a><a href="/book.html" class="media-link">
-                  <div class="media">
-                    <div class="media-left"><img src="assets/img/book-thumb-3.png" alt="" class="pull-left"></div>
-                    <div class="media-body">
-                      <p>На пределе</p><small>326 баллов набрано</small>
-                    </div>
-                  </div></a>
-              </div>
-            </div>
-          </aside>
-          <div class="col-md-8">
-            <div class="dashbord">
-              <h1>Добро пожаловать на неделю 2!</h1>
-              <p>Поздравляем тех, кто прошел прошлые 7 дней и особенно тех, кто дочитал книгу Триггеры за неделю!</p>
-              <p>Впереди очередные 200 страниц, вы узнаете о том, как управлять своей энергией, не выгорать и как полезно провести время, если вы не можете уснуть. Также вы получите несколько практических упражнений, которые помогут вам жить лучше и читать больше.</p>
-              <p>А сейчас мы хотим поделиться несколькими видео:</p><img src="http://placehold.it/850x300" class="img-responsive">
             </div>
           </div>
         </div>

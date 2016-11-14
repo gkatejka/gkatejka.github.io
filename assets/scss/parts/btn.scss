@@ -29,6 +29,23 @@
   }
 }
 
+.btn-success {
+  background: $green;
+  border-color: $green;
+
+  &:hover,
+  &:focus,
+  &:active:hover {
+    background: lighten($green, 3%);
+    border-color: lighten($green, 3%);
+  }
+
+  &:active {
+    background: darken($green, 3%);
+    border-color: darken($green, 3%);
+  }
+}
+
 .btn-clear {
   background: transparent;
   border-color: rgba(151,151,151,.32);
@@ -220,6 +237,7 @@
   color: #2E2D2D;
   font-size: 13px;
 }
+
 
 .btn-edit {
   display: inline-block;
