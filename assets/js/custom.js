@@ -6,14 +6,21 @@ $(function(){
     $('#bookprogress>.book-progress').detach().prependTo('#booknav');
   }
 
+  // // ESSEY
+  // var esseyItem = document.getElementById('quality').getElementsByTagName('input');
+  // var pointsEssey = 0;
+  // for (var j = 0; j < esseyItem.length; j++) {
+  //   if( esseyItem[j].checked) {
+  //     pointsEssey = + esseyItem[j].value;
+  //     break;
+  //   }
+  // }
+
+  // document.getElementById('pointsAll').innerHTML = pointsEssey;
+  // document.getElementById('pointsAbstract').value = pointsEssey;
 
 
-  //                  _       __
-  //     ____  ____  (_)___  / /______
-  //    / __ \/ __ \/ / __ \/ __/ ___/
-  //   / /_/ / /_/ / / / / / /_(__  )
-  //  / .___/\____/_/_/ /_/\__/____/
-  // /_/
+  // POINTS
   var pointsMin = 0;
   var pointsMax = 100;      // Максимум баллов
   var thesisCounter;        // Кол-во тезисов
@@ -37,7 +44,7 @@ $(function(){
     }
 
     // Считаем быллы за качество конспекта
-    var qualityElem = document.getElementById('thesesQuality').getElementsByTagName('input');
+    var qualityElem = document.getElementById('quality').getElementsByTagName('input');
 
     for (var j = 0; j < qualityElem.length; j++) {
       if( qualityElem[j].checked) {
@@ -64,6 +71,7 @@ $(function(){
   function totalPoints(){
     var total = Culc();
     document.getElementById('pointsAll').innerHTML = total;
+    document.getElementById('pointsAbstract').value = total;
     return total;
   }
 

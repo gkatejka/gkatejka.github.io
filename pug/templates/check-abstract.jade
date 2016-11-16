@@ -43,7 +43,7 @@
                 label(for='point4')
                   | Если баллы низкие – конспект можно отправить на доработку, но баллы все равно будут проставлены. Если читатель не сдаст повтоно до дедлайна – баллы сохраняются
 
-          .work-check-row#thesesQuality
+          .work-check-row#quality
             h3.work-check-title Оцените качество конспекта
             .btn-group.btn-group-justified
               .btn-group
@@ -61,6 +61,7 @@
 
           .work-check-row
             textarea(rows='3', placeholder='Комментарий')
+            input(type='hidden', name='pointsCount', id='pointsAbstract', value='0')
 
           .work-check-btns.row
             .col-xs-5

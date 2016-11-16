@@ -25,46 +25,28 @@
             p
               | Ключевая идея занимает примерно три строки мелким шрифтом. Для получения положительных баллов читатель должен сформулировать ее в конспекте.
           
-          .work-check-row
+          .work-check-row#checkEssey
             h3.work-check-title Тема раскрыта
             .btn-group.btn-group-justified
               .btn-group
-                input(type='radio', id='marktopic1', name='topic')
-                label(for='marktopic1') Посредственно
+                input(type='radio', id='marktopic1', name='topic', value='30')
+                label(for='marktopic1') Не раскрыта
               .btn-group
-                input(type='radio', id='marktopic2', name='topic')
-                label(for='marktopic2') Так себе
+                input(type='radio', id='marktopic2', name='topic', value='50', checked)
+                label(for='marktopic2') Средний текст
               .btn-group
-                input(type='radio', id='marktopic3', name='topic', checked)
-                label(for='marktopic3') Хорошо
-              .btn-group
-                input(type='radio', id='marktopic4', name='topic')
-                label(for='marktopic4') Отлично!
-
-          .work-check-row
-            h3.work-check-title Точка зрения автора раскрыта
-
-            .btn-group.btn-group-justified
-              .btn-group
-                input(type='radio', id='markpoint1', name='point', checked)
-                label(for='markpoint1') Посредственно
-              .btn-group
-                input(type='radio', id='markpoint2', name='point')
-                label(for='markpoint2') Так себе
-              .btn-group
-                input(type='radio', id='markpoint3', name='point')
-                label(for='markpoint3') Хорошо
-              .btn-group
-                input(type='radio', id='markpoint4', name='point')
-                label(for='markpoint4') Отлично!
-
+                input(type='radio', id='marktopic3', name='topic', value='75')
+                label(for='marktopic3') Потрясающе
           .work-check-row
             textarea(rows='3', placeholder='Комментарий')
+            input(type='hidden', name='pointsCount', id='pointsEssy', value='0')
 
           .work-check-btns.row
             .col-xs-5
               button.btn.btn-blue.clearfix(type='submit')
                 .pull-left Принять
-                .pull-right 75 баллов
+                .pull-right
+                  span#pointsAllEssey 50
+                  |  баллов
             .col-xs-7
               button.btn.btn-default(type='button') Отправить на доработку
