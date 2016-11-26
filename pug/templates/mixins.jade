@@ -37,7 +37,7 @@ mixin editpanel(title, btnText)
 mixin user-success(numImg, bookName, bookAuthor, num1, num2, num3, num4, num5)
   tr
     td.user-rating-book
-      a.media(href='')
+      a.media(href='#')
         .media-left
           img(src='assets/img/book-thumb-#{numImg}.png', width='48', height='69', alt='')
         .media-body
@@ -48,6 +48,31 @@ mixin user-success(numImg, bookName, bookAuthor, num1, num2, num3, num4, num5)
     td=num3
     td=num4
     td=num5
+
+//- Успехи пользователя (мобильная версия)
+mixin user-success-mobile(numImgMobile, bookNameMobile, num1Mobile, num2Mobile, num3Mobile, num4Mobile, num5Mobile)
+  tr
+    td.user-rating-book-img
+      a(href='#')
+        img(src='assets/img/book-thumb-#{numImgMobile}.png', width='48', height='69', alt='')
+    td
+      .user-book-name=bookNameMobile
+      .user-book-rating-row
+        span.user-book-point=num1Mobile
+        span.user-book-point-title За конспекты
+      .user-book-rating-row
+        span.user-book-point=num2Mobile
+        span.user-book-point-title За спецзадания
+      .user-book-rating-row
+        span.user-book-point=num3Mobile
+        span.user-book-point-title За видео
+      .user-book-rating-row
+        span.user-book-point=num4Mobile
+        span.user-book-point-title За репосты
+            .user-book-rating-row
+        span.user-book-point-all=num5Mobile
+        span.user-book-point-title В сумме
+
 
 //- Рейтинг пользователей
 mixin rating(num, personName, personRead, ratingStep, ratingAll)
