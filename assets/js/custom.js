@@ -19,7 +19,7 @@ $(function(){
   // document.getElementById('pointsAll').innerHTML = pointsEssey;
   // document.getElementById('pointsAbstract').value = pointsEssey;
 
-
+  
   // POINTS
   var pointsMin = 0;
   var pointsMax = 100;      // Максимум баллов
