@@ -123,6 +123,7 @@
       margin-bottom: 0;
       background-color: $dark;
       overflow: visible;
+      position: relative;
     }
 
     .progress-bar {
@@ -130,6 +131,7 @@
     }
 
     .progress-bar-success {
+      z-index: 9;
 
       &::before {
         width: 14px;
@@ -144,6 +146,10 @@
     }
 
     .progress-bar-info {
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 8;
       
       &::before {
         width: 16px;

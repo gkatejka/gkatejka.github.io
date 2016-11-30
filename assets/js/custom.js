@@ -16,6 +16,7 @@ $(function(){
     var thesesItem = document.getElementById('thesesInputs').getElementsByTagName('input');
 
     thesisCounter = thesesItem.length;
+
     var thesisValue = pointsMax / thesisCounter;    // Кол-во баллов за 1 тезис
 
     function Culc() {
@@ -115,7 +116,5 @@ $(function(){
   if (document.getElementById('esseyInputs')){
     checkEssey();
   }
-
-
 
 });
