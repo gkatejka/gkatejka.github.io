@@ -85,6 +85,7 @@ label {
       & > .col-md-4,
       & > .col-md-8{
         height: 100%;
+        overflow-y: scroll;
 
         @media (max-width: $desktop) {
           height: auto;

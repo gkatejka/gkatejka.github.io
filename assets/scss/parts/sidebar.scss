@@ -89,6 +89,12 @@
     }
   }
 
+  &.sidebar-book {
+    .h3{
+      display: none;
+    }
+  }
+
   &.sidebar-book .media-current-book {
     @media (max-width: $tablet) {
       display: none;
